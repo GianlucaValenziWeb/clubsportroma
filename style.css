@@ -1,0 +1,832 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Ops+One&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Black+Ops+One&display=swap');
+
+* {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    --color1: #082984;
+    --color2: #fcdf00;
+    --color3: #eee3e3;
+    --color4: #fff;
+    font-family: 'poppins', sans-serif;
+    font-display: swap;
+}
+
+
+h1 {
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.2px;
+    color: var(--color1);
+}
+
+p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.2;
+}
+
+header {
+    background-color: var(--color1);
+    padding: 20px 40px;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar a {
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+    color: var(--color4);
+}
+
+.navbar a:hover {
+    color: var(--color2);
+}
+
+.navbar-left,
+.navbar-right {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+/* Responsive styling */
+@media (max-width: 1000px) {
+    .navbar-left a {
+        display: none;
+    }
+
+    .navbar-right a {
+        display: none;
+    }
+
+    header {
+        padding: 35px 0;
+    }
+
+}
+
+#home {
+    padding: 20px 40px;
+    background-image: url(images/foto-squadra.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background-color: var(--color3);
+}
+
+#home h1 {
+    background-color: #2b1b90;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.5px;
+}
+
+#match {
+    padding: 0px 0px;
+    background-color: var(--color3);
+}
+
+/* 
+#match h2 {
+    text-align: center;
+}
+
+.serieb {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.serieb img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-incontro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.container-squadra .container-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.container-squadra .container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-squadra {
+    text-align: center;
+}
+
+.container-squadra span {
+    font-size: 1.1rem;
+}
+
+.container-versus {
+    font-size: 4rem;
+    font-family: 'Libre Caslon Text', serif;
+}
+
+.data {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+} */
+.wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /* uguale a sotto */
+    height: 600px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x proximity;
+}
+
+.card {
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 20px 30px;
+    flex-shrink: 0;
+    width: 100%;
+    /* uguale a sopra */
+    height: 600px;
+    background-color: rgb(205, 190, 190);
+    /* border-radius: 14px; */
+    text-align: center;
+}
+
+
+.card h2 {
+    text-align: center;
+}
+
+.serieb {
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.serieb img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-incontro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 60px;
+}
+
+.container-squadra .container-img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.container-squadra .container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container-squadra {
+    text-align: center;
+}
+
+.container-squadra span {
+    font-size: 1.1rem;
+}
+
+.container-versus {
+    font-size: 4rem;
+    font-family: "PT Serif", serif;
+}
+
+.data {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+/* ----------------------------------------------- STRUTTURE ----------------------------------------------- */
+#strutture {
+    padding: 70px 40px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    background-color: var(--color3);
+}
+
+.container-strutture {
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color4);
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.tab {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Stile per l'immagine */
+.container-img {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenuto del testo */
+.content {
+    flex: 1;
+}
+
+.content h3 {
+    margin-bottom: 6px;
+}
+
+/* Stile per la sezione Maps */
+.maps {
+    text-align: left;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.maps hr {
+    border: none;
+    border-top: 1px solid #a7a7a7;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.maps a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.3px;
+    color: #787878;
+}
+
+.maps a:hover {
+    color: var(--color1);
+    color: #488fed;
+}
+
+/* ----------------------------------------------- SPONSOR ----------------------------------------------- */
+#sponsor {
+    padding: 60px 40px;
+    background-color: var(--color3);
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.layout-container h3 {
+    text-align: left;
+    margin-bottom: 5px;
+    /* margin-top: 40px; */
+}
+
+.layout-container hr {
+    margin-bottom: 12px;
+    border: none;
+    border-top: 2px solid #a8a8a8;
+}
+
+.gallery {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    height: 150px;
+    overflow: hidden;
+    background-color: var(--color4);
+    border-radius: 10px;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.45);
+    padding: 10px;
+}
+
+/* Stile per le immagini */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* Adatta l'immagine senza distorcerla */
+}
+
+
+/* ----------------------------------------------- CATEGORIE ----------------------------------------------- */
+
+#categorie {
+    padding: 70px 40px;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    background-color: var(--color3);
+}
+
+.container-categorie {
+    /* border: 2px solid #ccc; */
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.45);
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color4);
+    /* background-color: #f9f9f9; */
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.categorie {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+/* Stile per l'immagine */
+.categorie .container-img {
+    width: 120px;
+    height: 120px;
+}
+
+.categorie .container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenuto del testo */
+.content-categorie {
+    flex: 1;
+}
+
+.content-categorie h3 {
+    margin-bottom: 5px;
+}
+
+.tuttocampo {
+    text-align: left;
+    margin-top: 6px;
+    width: 100%;
+}
+
+.tuttocampo hr {
+    border: none;
+    border-top: 1px solid #a7a7a7;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.tuttocampo a {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.3px;
+    color: #787878;
+}
+
+.tuttocampo a:hover {
+    color: var(--color1);
+    color: #149347;
+}
+
+
+
+/* ----------------------------------------------- STORIA ----------------------------------------------- */
+#storia {
+    width: 100%;
+    padding: 70px 40px;
+    color: #333;
+    background-color: var(--color3);
+}
+
+/* Contenitore del contenuto */
+.storia-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Blocco singolo */
+.storia-block {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Immagine del blocco */
+.storia-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Testo del blocco */
+.storia-text {
+    flex: 1;
+}
+
+/* Stile del titolo e paragrafo del testo */
+.storia-text h2 {
+    color: #0044cc;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.storia-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Reverse layout per i blocchi con immagine a destra */
+.storia-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Media Query per schermi più piccoli */
+@media (max-width: 768px) {
+    .storia-block {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .storia-block.reverse {
+        flex-direction: column;
+    }
+
+    .storia-image img {
+        width: 100%;
+    }
+}
+
+/* ----------------------------------------------- SCUOLA CALCIO ----------------------------------------------- */
+#scuolacalcio {
+    padding: 60px 40px;
+    background-color: var(--color3);
+}
+
+.container-scuola {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.photo {
+    display: flex;
+    justify-content: left;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+
+.container-photo {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    height: 200px;
+    overflow: hidden;
+    background-color: var(--color4);
+    border-radius: 10px;
+    box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.45);
+    /* padding: 10px; */
+}
+
+.container-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.call-to-action {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #082984;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    background-color: #59678e;
+}
+
+
+
+/* .scuola-content .contattaci {
+    color: #fff;
+    border-radius: 5px;
+    background-color: #005A94;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 18px;
+    transition: background-color 0.3s;
+    gap: 8px;
+}
+
+.scuola-content .contattaci:hover {
+    background-color: #083d75;
+    transition: background-color 0.3s ease;
+} */
+
+
+/* --------------------------------------------- FOOTER ------------------------------------- */
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+    background-color: var(--color1);
+}
+
+.footer-section {
+    border-right: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-section:last-child {
+    border-right: none;
+}
+
+.footer-section h3 {
+    margin-bottom: 12px;
+    color: var(--color2);
+    font-style: italic;
+    font-size: 1.6rem;
+}
+
+
+.footer-section p,
+a {
+    color: var(--color4);
+}
+
+/* Links Section */
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links li a {
+    color: var(--color4);
+    font-weight: normal;
+}
+
+.footer-links li a:hover {
+    color: var(--color2);
+    transition: color .3s ease;
+}
+
+/* Social Icons Section */
+.link-servizi {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.link-servizi li {
+    display: flex;
+    align-items: center;
+}
+
+.link-servizi li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color4);
+}
+
+.link-servizi li a span:hover,
+.link-servizi li a i:hover,
+#email:hover {
+    transition: color .3s;
+    color: var(--color2);
+}
+
+.social-icons {
+    display: inline-block !important;
+    padding: 20px;
+}
+
+.social-icons i {
+    font-size: 2rem;
+    padding: 0 15px;
+    transition: transform .4s;
+    display: inline-block;
+}
+
+.social-icons i:hover {
+    transform: translateY(-5px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 18px 0;
+    border-top: 1px solid #444;
+    height: 50px;
+    background-color: var(--color1);
+}
+
+.footer-bottom p {
+    color: var(--color4);
+}
+
+
+/* ----------------------------------------------------- SFONDO BLU ---------------------------------- */
+.interruzione {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    /* Allinea il testo in basso */
+    font-size: 2.3rem;
+    width: 100%;
+    height: 130px;
+    background-color: var(--color1);
+    padding: 10px 48px;
+    /* Margine interno su entrambi i lati */
+}
+
+.interruzione .text {
+    color: var(--color2);
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.5px;
+
+}
+
+.custom-shape-divider-top-1731431830 {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1731431830 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 35px;
+}
+
+.custom-shape-divider-top-1731431830 .shape-fill {
+    fill: var(--color1);
+}
+
+/* ----------------------------------------------- CALENDARIO ----------------------------------------------- */
+
+#calendario {
+    padding: 80px 40px;
+    /* max-width: 1200px; */
+    background-color: var(--color3);
+}
+
+#calendario .container-calendario {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+#calendario .partita {
+    background-color: var(--color4);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+#calendario .serieb img {
+    max-width: 45px;
+    height: auto;
+    /* background-color: #0044cc; */
+}
+
+#calendario .container-incontro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: 15px 0; */
+}
+
+#calendario .container-squadra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+#calendario .container-squadra .container-img {
+    max-width: 70px;
+    height: auto;
+}
+
+#calendario .container-img img {
+    width: 100%;
+    height: 100%;
+}
+
+#calendario .container-versus {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #595959;
+    padding: 0 10px;
+    font-family: "PT Serif", serif;
+}
+
+#calendario .data {
+    font-size: 1rem;
+    color: #6f6f6f;
+    padding-bottom: 10px;
+}
