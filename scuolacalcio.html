@@ -45,15 +45,27 @@
 
     <section id="scuolacalcio">
         <div class="container-scuola">
-            <div class="photo">
-                <div class="container-photo">
-                    <img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="">
+            <div class="carousel-container">
+                <!-- Immagini del Carousel -->
+                <div class="carousel">
+                    <img src="images/foto-squadra.jpg" alt="Immagine 1" class="carousel-item">
+                    <img src="images/scuolacalcio.jpg" alt="Immagine 2" class="carousel-item">
+                    <img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Immagine 3"
+                        class="carousel-item">
+                    <img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Immagine 4"
+                        class="carousel-item">
+                    <img src="images/cpg-removebg-preview.png" alt="Immagine 5" class="carousel-item">
+                    <img src="images/campo-Photoroom.jpg" alt="Immagine 6" class="carousel-item">
                 </div>
-                <div class="container-photo">
-                    <img src="images/foto-squadra.jpg" alt="">
-                </div>
-                <div class="container-photo">
-                    <img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="">
+
+                <!-- Indicatori -->
+                <div class="indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                    <span class="indicator" data-index="3"></span>
+                    <span class="indicator" data-index="4"></span>
+                    <span class="indicator" data-index="5"></span>
                 </div>
             </div>
 
@@ -71,78 +83,35 @@
             <div class="call-to-action"> <a href="#contatti" class="contact-link">Scopri come unirti a noi!</a> </div>
         </div>
     </section>
-
-<!-- 
-    <section id="footer">
-        <footer class="container-footer">
-            <div class="footer-section scroll-scale">
-                <h3>Mappa del sito</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#info">Chi siamo</a></li>
-                    <li><a href="#servizi">Servizi</a></li>
-                    <li><a href="#competenze">Competenze</a></li>
-                    <li><a href="#lavori">Lavori</a></li>
-                    <li><a href="#contatti">Contatti</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-section scroll-scale">
-                <h3 id="t-social">Servizi</h3>
-                <ul class="link-servizi">
-                    <li>
-                        <a href="#servizi">
-                            <span>Realizzazione siti web</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#servizi">
-                            <span>Realizzazione CV Vitae</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#servizi">
-                            <span>Ottimizzazione SEO</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#servizi">
-                            <span>Realizzazione loghi</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#servizi">
-                            <span>Assistenza del sito</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-section scroll-scale">
-                <h3>Contatti</h3>
-                <p>Email:
-                    <a id="email" href="https://www.google.com/intl/it/gmail/about/"
-                        aria-label="link gmail gianluca valenzi" target="_blank">gianlucavalenziweb@gmail.com</a>
-                </p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/gianluca-valenzi-319535324/" target="_blank"
-                        aria-label="link linkedin gianluca valenzi">
-                        <i class="devicon-linkedin-plain colored"></i>
-                    </a>
-                    <a href="https://github.com/GianlucaValenziWeb" target="_blank"
-                        aria-label="link git-hub valenzi gianluca ">
-                        <i class="devicon-github-original"></i>
-                    </a>
-                </div>
-            </div>
-        </footer>
-
-        <div class="footer-bottom">
-            <p>&copy; 2024 Gianluca Valenzi. All Rights Reserved.</p>
-        </div>
-    </section> -->
-
-
 </body>
+
+<script>
+    const carousel = document.querySelector('.carousel');
+    const indicators = document.querySelectorAll('.indicator');
+
+    // Funzione per sincronizzare indicatori con lo scorrimento
+    carousel.addEventListener('scroll', () => {
+        const scrollLeft = carousel.scrollLeft;
+        const carouselWidth = carousel.scrollWidth - carousel.clientWidth;
+        const index = Math.round((scrollLeft / carouselWidth) * (indicators.length - 1));
+
+        indicators.forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+    });
+
+    // Event Listener per cliccare sugli indicatori
+    indicators.forEach(indicator => {
+        indicator.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index);
+            const scrollAmount = carousel.scrollWidth / indicators.length;
+            carousel.scrollTo({
+                left: index * scrollAmount,
+                behavior: 'smooth',
+            });
+        });
+    });
+
+</script>
 
 </html>

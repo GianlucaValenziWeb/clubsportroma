@@ -41,11 +41,12 @@ p {
 
 header {
     background-color: var(--color1);
-    padding: 20px 40px;
+    padding: 22px 40px;
     z-index: 100;
     position: fixed;
     width: 100%;
 }
+
 
 .navbar {
     display: flex;
@@ -80,9 +81,10 @@ header {
 .logo {
     width: 50px;
     height: 50px;
+    /* position: relative; */
 }
 
-/* Responsive styling */
+
 @media (max-width: 1000px) {
     .navbar-left a {
         display: none;
@@ -98,24 +100,124 @@ header {
 
 }
 
-#home {
+/* #home {
     padding: 20px 40px;
-    background-image: url(images/foto-squadra.jpg);
+    background-image: url(images/prova-img-Photoroom.png);
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 150vh;
     background-color: var(--color3);
-}
+} */
 
-#home h1 {
+/* #home h1 {
     background-color: #2b1b90;
     padding: 10px;
     border-radius: 5px;
     font-family: "Black Ops One", system-ui;
     letter-spacing: 1.5px;
+} */
+
+
+
+/* Sezione hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* Occupa tutta l'altezza dello schermo */
+    background: url("images/prova-home-Photoroom.png") no-repeat center center/cover;
+    /* Immagine di sfondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
 }
+
+/* Overlay per scurire lo sfondo */
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Oscura leggermente lo sfondo */
+    z-index: 1;
+}
+
+/* Contenuto */
+.hero .content {
+    /* position: relative; */
+    z-index: 2;
+    /* max-width: 600px; */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.hero .titolo {
+    font-size: 3.3rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Black Ops One", system-ui;
+    color: var(--color2);
+    /* background: linear-gradient(90deg, #fcdf00, #082984); */
+    /* background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #f0f0f0;
+}
+
+/* Pulsante Call-to-Action */
+.cta-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #082984;
+    /* Colore pulsante */
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #004ecb;
+    /* Cambia colore al passaggio del mouse */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
 
 #match {
     padding: 0px 0px;
@@ -330,6 +432,20 @@ header {
     color: #488fed;
 }
 
+@media (max-width: 750px) {
+    .tab {
+        flex-direction: column;
+    }
+
+    .container-img {
+        width: 100%;
+    }
+
+    .maps a {
+        font-size: 0.9rem;
+    }
+}
+
 /* ----------------------------------------------- SPONSOR ----------------------------------------------- */
 #sponsor {
     padding: 60px 40px;
@@ -456,6 +572,23 @@ header {
     color: var(--color1);
     color: #149347;
 }
+
+@media (max-width: 750px) {
+    .categorie {
+        flex-direction: column;
+    }
+
+    .categorie .container-img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+    }
+
+    .tuttocampo a {
+        font-size: 0.9rem;
+    }
+}
+
 
 
 
@@ -829,4 +962,59 @@ a {
     font-size: 1rem;
     color: #6f6f6f;
     padding-bottom: 10px;
+}
+
+/*  footer  */
+.carousel-container {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color3);
+}
+
+/* Immagini del Carousel */
+.carousel {
+    display: flex;
+    scroll-behavior: smooth;
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Per browser moderni */
+    -ms-overflow-style: none;
+    /* Per IE e Edge */
+
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+    /* Nascondi scrollbar su Webkit */
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    /* Altezza delle immagini */
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+/* Indicatori */
+.indicators {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #969595;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: var(--color1);
 }
