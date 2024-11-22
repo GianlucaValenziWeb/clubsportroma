@@ -44,74 +44,84 @@
     </div>
 
     <section id="scuolacalcio">
-        <div class="container-scuola">
-            <div class="carousel-container">
-                <!-- Immagini del Carousel -->
-                <div class="carousel">
-                    <img src="images/foto-squadra.jpg" alt="Immagine 1" class="carousel-item">
-                    <img src="images/scuolacalcio.jpg" alt="Immagine 2" class="carousel-item">
-                    <img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Immagine 3"
-                        class="carousel-item">
-                    <img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Immagine 4"
-                        class="carousel-item">
-                    <img src="images/cpg-removebg-preview.png" alt="Immagine 5" class="carousel-item">
-                    <img src="images/campo-Photoroom.jpg" alt="Immagine 6" class="carousel-item">
-                </div>
+        <div class="layout-grid">
+            <div class="image-item"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Image 1"></div>
+            <div class="image-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Image 2"></div>
+            <div class="image-item"><img src="images/campo-Photoroom.jpg" alt="Image 3"></div>
+            <div class="image-item"><img src="images/foto-squadra.jpg" alt="Image 4"></div>
+        </div>
 
-                <!-- Indicatori -->
-                <div class="indicators">
-                    <span class="indicator active" data-index="0"></span>
-                    <span class="indicator" data-index="1"></span>
-                    <span class="indicator" data-index="2"></span>
-                    <span class="indicator" data-index="3"></span>
-                    <span class="indicator" data-index="4"></span>
-                    <span class="indicator" data-index="5"></span>
-                </div>
+        <div class="layout-carousel">
+            <div class="carousel">
+                <div class="carousel-item active"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Image 1"></div>
+                <div class="carousel-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Image 2"></div>
+                <div class="carousel-item"><img src="images/campo-Photoroom.jpg" alt="Image 3"></div>
+                <div class="carousel-item"><img src="images/foto-squadra.jpg" alt="Image 4"></div>
             </div>
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
 
-            <div class="content-scuola">
-                <p>Unisciti alla nostra scuola di calcio a 5 e scopri l’emozione di far parte di una squadra che punta
-                    alla crescita e al divertimento di ogni giocatore! Che tu sia alle prime armi o abbia già
-                    esperienza, qui troverai allenatori preparati, compagni appassionati e un ambiente positivo in cui
-                    migliorare le tue abilità. Crediamo che il calcio sia molto più di uno sport: è un'opportunità per
-                    sviluppare disciplina, amicizie e una sana competizione. Entra a far parte della nostra comunità e
-                    vivi con noi l’avventura del calcio a 5!</p>
-            </div>
-            <!-- <a href="#footer" class="contattaci">
+        <div class="content-scuola">
+            <h3>divertitimento assicurato!</h3>
+            <p>Unisciti alla nostra scuola di calcio a 5 e scopri l’emozione di far parte di una squadra che punta
+                alla crescita e al divertimento di ogni giocatore! Che tu sia alle prime armi o abbia già
+                esperienza, qui troverai allenatori preparati, compagni appassionati e un ambiente positivo in cui
+                migliorare le tue abilità. Crediamo che il calcio sia molto più di uno sport: è un'opportunità per
+                sviluppare disciplina, amicizie e una sana competizione. Entra a far parte della nostra comunità e
+                vivi con noi l’avventura del calcio a 5!</p>
+        </div>
+        <!-- <a href="#footer" class="contattaci">
                 contattaci
             </a> -->
-            <div class="call-to-action"> <a href="#contatti" class="contact-link">Scopri come unirti a noi!</a> </div>
+        <div class="call-to-action"> <a href="#contatti" class="contact-link">Scopri come unirti a noi!</a> </div>
         </div>
     </section>
 </body>
 
 <script>
-    const carousel = document.querySelector('.carousel');
-    const indicators = document.querySelectorAll('.indicator');
+    // JavaScript per il Carousel
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const carouselInner = document.querySelector('.carousel');
+    const dots = document.querySelectorAll('.dot');
 
-    // Funzione per sincronizzare indicatori con lo scorrimento
-    carousel.addEventListener('scroll', () => {
-        const scrollLeft = carousel.scrollLeft;
-        const carouselWidth = carousel.scrollWidth - carousel.clientWidth;
-        const index = Math.round((scrollLeft / carouselWidth) * (indicators.length - 1));
+    let currentIndex = 0;
 
-        indicators.forEach((dot, i) => {
+    // Funzione per aggiornare il carousel
+    function updateCarousel(index) {
+        const width = carouselInner.offsetWidth;
+        carouselInner.style.transform = `translateX(-${index * width}px)`;
+
+        dots.forEach((dot, i) => {
             dot.classList.toggle('active', i === index);
         });
+    }
+
+    // Eventi dei pulsanti
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? dots.length - 1 : currentIndex - 1;
+        updateCarousel(currentIndex);
     });
 
-    // Event Listener per cliccare sugli indicatori
-    indicators.forEach(indicator => {
-        indicator.addEventListener('click', (e) => {
-            const index = parseInt(e.target.dataset.index);
-            const scrollAmount = carousel.scrollWidth / indicators.length;
-            carousel.scrollTo({
-                left: index * scrollAmount,
-                behavior: 'smooth',
-            });
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % dots.length;
+        updateCarousel(currentIndex);
+    });
+
+    // Eventi dei puntini
+    dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+            currentIndex = i;
+            updateCarousel(currentIndex);
         });
     });
-
 </script>
 
 </html>
