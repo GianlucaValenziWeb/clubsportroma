@@ -6,31 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asd Club sport roma</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <input type="checkbox" id="check">
+
             <div class="navbar-left">
-                <a href="#home">Home</a>
-                <a href="#storia">Storia</a>
-                <a href="#calendario">Calendario</a>
-                <a href="#scuolacalcio">Scuola calcio</a>
+                <a href="index.html">Home</a>
+                <a href="storia.html">Storia</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="scuolacalcio.html">Scuola calcio</a>
             </div>
+
             <div class="navbar-center">
                 <a href="#home">
                     <img src="images/Club-Sport-Roma-removebg-preview.png" alt="Logo" class="logo">
                 </a>
             </div>
+
             <div class="navbar-right">
-                <a href="#categorie">Categorie</a>
-                <a href="#strutture">Strutture</a>
-                <a href="#sponsor">Sponsor</a>
-                <a href="#contatti">Contatti</a>
+                <a href="categorie.html">Categorie</a>
+                <a href="strutture.html">Strutture</a>
+                <a href="sponsor.html">Sponsor</a>
+                <a href="#footer">Contatti</a>
+            </div>
+
+            <label for="check" class="nav-toggle" id="open-menu">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <div class="menu">
+                <label for="check" class="nav-toggle close-menu">
+                    <i class='bx bx-x'></i>
+                </label>
+                <div class="menu-links">
+                    <a href="index.html">Home</a>
+                    <hr>
+                    <a href="storia.html">Storia</a>
+                    <hr>
+                    <a href="calendario.html">Calendario</a>
+                    <hr>
+                    <a href="scuolacalcio.html">Scuola calcio</a>
+                    <hr>
+                    <a href="categorie.html">Categorie</a>
+                    <hr>
+                    <a href="strutture.html">Strutture</a>
+                    <hr>
+                    <a href="sponsor.html">Sponsor</a>
+                    <hr>
+                    <a href="#footer">Contatti</a>
+                    <hr>
+                </div>
             </div>
         </nav>
     </header>
-
 
     <div class="interruzione">
         <div class="text">categorie</div>
@@ -45,10 +77,12 @@
             </svg>
         </div>
 
+        <h3 class="title-cat-p">Categorie maschili</h3>
+        <hr>
         <div class="container-categorie" id="serieb">
             <div class="categorie">
                 <div class="container-img">
-                    <img src="images/pallone-jpg.jpg" alt="">
+                    <img src="images/pallone-maschi-2-removebg-preview.png" alt="">
                 </div>
                 <div class="content-categorie">
                     <h3>Serie B</h3>
@@ -60,7 +94,7 @@
                         <!-- tuttocampo -->
                     <div class="tuttocampo">
                         <hr>
-                        <a href="">seguici su tuttocampo</a>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
                     </div>
                 </div>
             </div>
@@ -68,7 +102,7 @@
         <div class="container-categorie">
             <div class="categorie">
                 <div class="container-img">
-                    <img src="images/pallone-jpg.jpg" alt="">
+                    <img src="images/pallone-maschi-2-removebg-preview.png" alt="">
                 </div>
                 <div class="content-categorie">
                     <h3>Under 21 regionale</h3>
@@ -77,7 +111,7 @@
                     <!-- tuttocampo -->
                     <div class="tuttocampo">
                         <hr>
-                        <a href="">seguici su tuttocampo</a>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
                     </div>
                 </div>
             </div>
@@ -85,7 +119,7 @@
         <div class="container-categorie" id="under19">
             <div class="categorie">
                 <div class="container-img">
-                    <img src="images/pallone-jpg.jpg" alt="">
+                    <img src="images/pallone-maschi-2-removebg-preview.png" alt="">
                 </div>
                 <div class="content-categorie">
                     <h3>Under 19 nazionale</h3>
@@ -96,7 +130,7 @@
                     <!-- tuttocampo -->
                     <div class="tuttocampo">
                         <hr>
-                        <a href="">seguici su tuttocampo</a>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
                     </div>
                 </div>
             </div>
@@ -104,7 +138,7 @@
         <div class="container-categorie">
             <div class="categorie">
                 <div class="container-img">
-                    <img src="images/pallone-jpg.jpg" alt="">
+                    <img src="images/pallone-maschi-2-removebg-preview.png" alt="">
                 </div>
                 <div class="content-categorie">
                     <h3>Under 17 èlite</h3>
@@ -113,7 +147,7 @@
                     <!-- tuttocampo -->
                     <div class="tuttocampo">
                         <hr>
-                        <a href="">seguici su tuttocampo</a>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
                     </div>
                 </div>
             </div>
@@ -121,7 +155,7 @@
         <div class="container-categorie">
             <div class="categorie">
                 <div class="container-img">
-                    <img src="images/pallone-jpg.jpg" alt="">
+                    <img src="images/pallone-maschi-2-removebg-preview.png" alt="">
                 </div>
                 <div class="content-categorie">
                     <h3>Under 15 èlite</h3>
@@ -131,7 +165,145 @@
                     <!-- tuttocampo -->
                     <div class="tuttocampo">
                         <hr>
-                        <a href="">seguici su tuttocampo</a>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <h3 class="title-cat-p">Categorie femminili</h3>
+        <hr>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Serie C</h3>
+                    <p>La serie C femminile rappresenta la nostra prima squadra, una
+                        categoria che richiede impegno, dedizione e un alto livello tecnico. Negli ultimi anni, ha
+                        raggiunto importanti risultati, come la finale di Coppa Italia regionale, dimostrando una
+                        crescita continua e una forte identità di squadra.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Serie D</h3>
+                    <p>La serie D femminile rappresenta il trampolino di lancio per giovani talenti e un'ottima
+                        occasione per consolidare esperienza in campo.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Under 19 nazionale</h3>
+                    <p>Le ragazze dell’Under 19 Nazionale affrontano un campionato di alto livello, dove possono
+                        confrontarsi con le migliori squadre italiane della categoria. È il passaggio cruciale per chi
+                        punta a un futuro nel calcio a 5 professionistico, grazie a sfide impegnative che esaltano
+                        talento e tattica.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Under 19 regionale</h3>
+                    <p>L’Under 15 è il punto di partenza per coloro che aspirano a una carriera nel futsal, e ogni
+                        allenamento e partita è un passo importante verso la costruzione di una solida base per il loro
+                        futuro nel nostro club e nel futsal in generale.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Under 17 regionale</h3>
+                    <p>Parallelamente, l’Under 19 Regionale si propone come una valida alternativa per le atlete che
+                        desiderano competere in ambito regionale, vivendo il campionato con serietà ma anche con un
+                        approccio più inclusivo e formativo, perfetto per consolidare il proprio bagaglio sportivo.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Under 15 regionale</h3>
+                    <p>L’Under 15
+                        Regionale consente alle giovani giocatrici di vivere il gioco in modo competitivo, ma sempre con
+                        un focus sull’apprendimento e sulla crescita personale, in un contesto sereno e motivante.</p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-categorie">
+            <div class="categorie">
+                <div class="container-img">
+                    <img src="images/pallone-femm-removebg-preview.png" alt="">
+                </div>
+                <div class="content-categorie">
+                    <h3>Under 13 regionale</h3>
+                    <p>Le più piccoline del settore femminile partecipano alla categoria Under 13, dove l’obiettivo
+                        principale è divertirsi e apprendere i fondamentali del calcio a 5. <br>
+                    </p>
+                    <!-- tuttocampo -->
+                    <div class="tuttocampo">
+                        <hr>
+                        <a href="">scopri di più <i class='bx bxs-upvote'></i></a>
                     </div>
                 </div>
             </div>

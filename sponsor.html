@@ -6,31 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asd Club sport roma</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <input type="checkbox" id="check">
+
             <div class="navbar-left">
-                <a href="#home">Home</a>
-                <a href="#storia">Storia</a>
-                <a href="#calendario">Calendario</a>
-                <a href="#scuolacalcio">Scuola calcio</a>
+                <a href="index.html">Home</a>
+                <a href="storia.html">Storia</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="scuolacalcio.html">Scuola calcio</a>
             </div>
+
             <div class="navbar-center">
                 <a href="#home">
                     <img src="images/Club-Sport-Roma-removebg-preview.png" alt="Logo" class="logo">
                 </a>
             </div>
+
             <div class="navbar-right">
-                <a href="#categorie">Categorie</a>
-                <a href="#strutture">Strutture</a>
-                <a href="#sponsor">Sponsor</a>
-                <a href="#contatti">Contatti</a>
+                <a href="categorie.html">Categorie</a>
+                <a href="strutture.html">Strutture</a>
+                <a href="sponsor.html">Sponsor</a>
+                <a href="#footer">Contatti</a>
+            </div>
+
+            <label for="check" class="nav-toggle" id="open-menu">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <div class="menu">
+                <label for="check" class="nav-toggle close-menu">
+                    <i class='bx bx-x'></i>
+                </label>
+                <div class="menu-links">
+                    <a href="index.html">Home</a>
+                    <hr>
+                    <a href="storia.html">Storia</a>
+                    <hr>
+                    <a href="calendario.html">Calendario</a>
+                    <hr>
+                    <a href="scuolacalcio.html">Scuola calcio</a>
+                    <hr>
+                    <a href="categorie.html">Categorie</a>
+                    <hr>
+                    <a href="strutture.html">Strutture</a>
+                    <hr>
+                    <a href="sponsor.html">Sponsor</a>
+                    <hr>
+                    <a href="#footer">Contatti</a>
+                    <hr>
+                </div>
             </div>
         </nav>
     </header>
-
 
     <div class="interruzione">
         <div class="text">sponsor</div>
@@ -49,20 +81,20 @@
                 <h3>Main sponsor</h3>
                 <hr>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="images/unicusano.png" alt="Main sponsor 1"></div>
-                    <div class="gallery-item"><img src="images/romanina.png" alt="Main sponsor 2"></div>
-                    <div class="gallery-item"><img src="images/feg (2).png" alt="Main sponsor 3"></div>
+                    <div class="gallery-item" id="m-sponsor"><img src="images/cpg-removebg-preview.png" alt="Partner ufficiale 3">
+                    </div>
+                    <div class="gallery-item" id="m-sponsor"><img src="images/ivm-removebg-preview.png" alt="Partner ufficiale 4">
+                    </div>
                 </div>
             </div>
-
+            
             <div class="partner">
                 <h3>Partner ufficiali</h3>
                 <hr>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="images/cpg-removebg-preview.png" alt="Partner ufficiale 3">
-                    </div>
-                    <div class="gallery-item"><img src="images/ivm-removebg-preview.png" alt="Partner ufficiale 4">
-                    </div>
+                    <div class="gallery-item"><img src="images/feg (2).png" alt="Main sponsor 3"></div>
+                    <div class="gallery-item"><img src="images/romanina.png" alt="Main sponsor 2"></div>
+                    <div class="gallery-item"><img src="images/green-edil-removebg-preview.png" alt="Supporter 2"></div>
                 </div>
             </div>
 
@@ -70,12 +102,95 @@
                 <h3>Supporter</h3>
                 <hr>
                 <div class="gallery">
-                    <div class="gallery-item"><img src="images/green-edil-removebg-preview.png" alt="Supporter 2"></div>
+                    <div class="gallery-item"><img src="images/unicusano.png" alt="Main sponsor 1"></div>
                     <div class="gallery-item"><img src="images/london-removebg-preview.png" alt="Supporter 3"></div>
+                    <div class="gallery-item"><img src="images/logo-scalchibus.png" alt="Supporter 3"></div>
                 </div>
             </div>
+            <!-- <div class="view-all">
+                <a href="all-articles.html">diventa uno sponsor</a>
+            </div> -->
+            <div class="call-to-action"> <a href="#contatti" class="contact-link">diventa uno sponsor</a> </div>
         </div>
+        </div>
+
     </section>
+<!-- 
+
+    <section id="footer">
+        <div class="loghi">
+            <div class="container-logo">
+                <img src="images/logo_footer.png" alt="">
+            </div>
+            <div class="container-logo">
+                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+            </div>
+            <div class="container-logo" id="serieb-logo-footer">
+                <img src="images/logo-serieb-removebg-preview.png" alt="">
+            </div>
+        </div>
+        <footer class="container-footer">
+            <div class="footer-section scroll-scale">
+                <h3>Contatti</h3>
+                <ul class="footer-links">
+                    <li><a href="">Email: giuliani.andrea@hotmail.com</a></li>
+                    <li><a href="">Pec: nordovest@pec.divisionecalcioa5.it</a></li>
+                    <li><a href="">Corrispondenza: Via Tuscania 12, 00191 Roma (RM)</a></li>
+                    <li><a href="">Telefono Sede: 3385428532</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section scroll-scale">
+                <h3 id="t-social">Menu</h3>
+                <div class="link-servizi">
+                    <ul class="container-footer-left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Storia</a></li>
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Scuola calcio</a></li>
+                    </ul>
+                    <ul class="container-footer-right">
+                        <li><a href="#">Categorie</a></li>
+                        <li><a href="#">Strutture</a></li>
+                        <li><a href="#">Sponsor</a></li>
+                        <li><a href="#">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-section scroll-scale">
+                <h3>Social</h3>
+                <div class="container-social">
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-instagram' id="instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-facebook' id="facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-youtube' id="youtube"></i>
+                            <span>Youtube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; A.S.D Club Sport Roma. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-gv">
+            <p>Design & code by <a href="linksito">Gianluca Valenzi</a></p>
+        </div>
+    </section> -->
 
 </body>
 

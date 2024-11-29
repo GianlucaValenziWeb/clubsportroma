@@ -6,31 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asd Club sport roma | Scuola calcio</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .container .box {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            /* align-items: center; */
+        }
+
+        .container .box .dream {
+            display: flex;
+            flex-direction: column;
+            width: 32.5%;
+        }
+
+        .container .box .dream img {
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <input type="checkbox" id="check">
+
             <div class="navbar-left">
-                <a href="#home">Home</a>
-                <a href="#storia">Storia</a>
-                <a href="#calendario">Calendario</a>
-                <a href="#scuolacalcio">Scuola calcio</a>
+                <a href="index.html">Home</a>
+                <a href="storia.html">Storia</a>
+                <a href="calendario.html">Calendario</a>
+                <a href="scuolacalcio.html">Scuola calcio</a>
             </div>
+
             <div class="navbar-center">
                 <a href="#home">
                     <img src="images/Club-Sport-Roma-removebg-preview.png" alt="Logo" class="logo">
                 </a>
             </div>
+
             <div class="navbar-right">
-                <a href="#categorie">Categorie</a>
-                <a href="#strutture">Strutture</a>
-                <a href="#sponsor">Sponsor</a>
-                <a href="#contatti">Contatti</a>
+                <a href="categorie.html">Categorie</a>
+                <a href="strutture.html">Strutture</a>
+                <a href="sponsor.html">Sponsor</a>
+                <a href="#footer">Contatti</a>
+            </div>
+
+            <label for="check" class="nav-toggle" id="open-menu">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <div class="menu">
+                <label for="check" class="nav-toggle close-menu">
+                    <i class='bx bx-x'></i>
+                </label>
+                <div class="menu-links">
+                    <a href="index.html">Home</a>
+                    <hr>
+                    <a href="storia.html">Storia</a>
+                    <hr>
+                    <a href="calendario.html">Calendario</a>
+                    <hr>
+                    <a href="scuolacalcio.html">Scuola calcio</a>
+                    <hr>
+                    <a href="categorie.html">Categorie</a>
+                    <hr>
+                    <a href="strutture.html">Strutture</a>
+                    <hr>
+                    <a href="sponsor.html">Sponsor</a>
+                    <hr>
+                    <a href="#footer">Contatti</a>
+                    <hr>
+                </div>
             </div>
         </nav>
     </header>
-
 
     <div class="interruzione">
         <div class="text">Scuola calcio a 5</div>
@@ -44,17 +106,75 @@
     </div>
 
     <section id="scuolacalcio">
-        <div class="layout-grid">
-            <div class="image-item"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Image 1"></div>
-            <div class="image-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Image 2"></div>
-            <div class="image-item"><img src="images/campo-Photoroom.jpg" alt="Image 3"></div>
-            <div class="image-item"><img src="images/foto-squadra.jpg" alt="Image 4"></div>
+        <div class="content-scuola">
+            <h3>Passione, Sport e Divertimento: Entra nel Mondo CSR!</h3>
+            <hr>
+            <p> Se sei alla ricerca di una realtà sportiva unica, dove talento, passione e divertimento si incontrano, la nostra scuola calcio a 5 è il posto giusto per te! Qui non troverai solo un luogo dove imparare a
+                giocare, ma una vera famiglia pronta a sostenerti in ogni passo del tuo percorso. Il nostro approccio è
+                costruito su misura per te: che tu sia un principiante o un giovane talento in cerca di perfezionare le
+                tue abilità, il nostro staff qualificato è pronto a guidarti con programmi formativi innovativi e
+                allenamenti stimolanti.
+
+                Oltre all’aspetto tecnico, ci impegniamo a promuovere valori fondamentali come il rispetto, la
+                disciplina e il gioco di squadra, che ti accompagneranno non solo sul campo, ma anche nella vita di
+                tutti i giorni. In un ambiente inclusivo e sicuro, avrai l'opportunità di stringere nuove amicizie,
+                affrontare sfide emozionanti e vivere l’adrenalina della competizione, sempre con un sorriso sul volto.
+<!-- 
+                Scegliere la nostra scuola calcio a 5 significa investire nel tuo futuro, divertirti senza limiti e fare
+                parte di un progetto ambizioso che punta a valorizzare il talento in ogni sua forma. Ti aspettiamo a
+                braccia aperte per iniziare insieme questa straordinaria avventura sportiva: perché il calcio a 5 non è
+                solo uno sport, è una passione che ci unisce!</p> -->
         </div>
 
+        <div class="container">
+            <div class="box">
+                <div class="dream">
+                    <img src="img-sc-csr/387749835_822469943009641_2517423501912284059_n.jpg" alt="">
+                    <img src="img-sc-csr/387831655_822470089676293_4916649113938599673_n.jpg" alt="">
+                    <img src="img-sc-csr/387842108_822470073009628_4305669815225380688_n.jpg" alt="">
+                    <img src="img-sc-csr/448861787_445514294945890_5657310129338472482_n.jpg" alt="">
+                    <img src="img-sc-csr/436261624_959572559299378_5141994165521378829_n.jpg" alt="">
+                    <img src="img-sc-csr/438097659_409816808515639_2632166989502934716_n.jpg" alt="">
+                    <img src="img-sc-csr/449483536_449825321181454_7430447013892931606_n.jpg" alt="">
+                </div>
+                <div class="dream">
+                    <img src="img-sc-csr/353596212_758649872724982_2208568653000682974_n.jpg" alt="">
+                    <img src="img-sc-csr/391728040_296124599884861_8260852677441935769_n.jpg" alt="">
+                    <img src="img-sc-csr/448886167_445506974946622_787507155061854858_n.jpg" alt="">
+                    <img src="img-sc-csr/387737542_822470129676289_7684540551983195673_n.jpg" alt="">
+                    <img src="img-sc-csr/448825143_445513908279262_4960443905679285591_n.jpg" alt="">
+                    <img src="img-sc-csr/458724482_1022757942980839_7397390873573666854_n.jpg" alt="">
+                    <img src="img-sc-csr/442419449_959572669299367_6084556605931354499_n.jpg" alt="">
+                </div>
+
+                <div class="dream">
+                    <img src="img-sc-csr/387742552_822469903009645_8027322305272908392_n.jpg" alt="">
+                    <img src="img-sc-csr/386513823_822469736342995_3439562089618860052_n.jpg" alt="">
+                    <img src="img-sc-csr/387147991_822469973009638_6371524435655760964_n.jpg" alt="">
+                    <img src="img-sc-csr/448961346_445513564945963_1041063569864839224_n.jpg" alt="">
+                    <img src="img-sc-csr/449192566_449827694514550_2934695326796904649_n.jpg" alt="">
+                    <img src="img-sc-csr/448888345_445515754945744_6489785599151663347_n.jpg" alt="">
+                    <img src="img-sc-csr/449436369_449826977847955_24869512415705093_n.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="call-to-action"> <a href="#contatti" class="contact-link">Scopri come unirti a noi!</a> </div>
+        </div>
+        <!-- <div class="layout-grid">
+            <div class="image-item"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Image 1">
+            </div>
+            <div class="image-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Image 2">
+            </div>
+            <div class="image-item"><img src="images/campo-Photoroom.jpg" alt="Image 3"></div>
+            <div class="image-item"><img src="images/foto-squadra.jpg" alt="Image 4"></div>
+        </div> -->
+        <!-- 
         <div class="layout-carousel">
             <div class="carousel">
-                <div class="carousel-item active"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg" alt="Image 1"></div>
-                <div class="carousel-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg" alt="Image 2"></div>
+                <div class="carousel-item active"><img src="images/387147991_822469973009638_6371524435655760964_n.jpg"
+                        alt="Image 1"></div>
+                <div class="carousel-item"><img src="images/387822493_822470039676298_7956360622480910102_n.jpg"
+                        alt="Image 2"></div>
                 <div class="carousel-item"><img src="images/campo-Photoroom.jpg" alt="Image 3"></div>
                 <div class="carousel-item"><img src="images/foto-squadra.jpg" alt="Image 4"></div>
             </div>
@@ -66,22 +186,7 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
             </div>
-        </div>
-
-        <div class="content-scuola">
-            <h3>divertitimento assicurato!</h3>
-            <p>Unisciti alla nostra scuola di calcio a 5 e scopri l’emozione di far parte di una squadra che punta
-                alla crescita e al divertimento di ogni giocatore! Che tu sia alle prime armi o abbia già
-                esperienza, qui troverai allenatori preparati, compagni appassionati e un ambiente positivo in cui
-                migliorare le tue abilità. Crediamo che il calcio sia molto più di uno sport: è un'opportunità per
-                sviluppare disciplina, amicizie e una sana competizione. Entra a far parte della nostra comunità e
-                vivi con noi l’avventura del calcio a 5!</p>
-        </div>
-        <!-- <a href="#footer" class="contattaci">
-                contattaci
-            </a> -->
-        <div class="call-to-action"> <a href="#contatti" class="contact-link">Scopri come unirti a noi!</a> </div>
-        </div>
+        </div> -->
     </section>
 </body>
 

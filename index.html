@@ -6,176 +6,331 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asd Club sport roma</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
 
 <body>
     <header>
         <nav class="navbar">
+            <input type="checkbox" id="check">
+
             <div class="navbar-left">
                 <a href="index.html">Home</a>
                 <a href="storia.html">Storia</a>
                 <a href="calendario.html">Calendario</a>
                 <a href="scuolacalcio.html">Scuola calcio</a>
             </div>
+
             <div class="navbar-center">
                 <a href="#home">
                     <img src="images/Club-Sport-Roma-removebg-preview.png" alt="Logo" class="logo">
                 </a>
             </div>
+
             <div class="navbar-right">
                 <a href="categorie.html">Categorie</a>
                 <a href="strutture.html">Strutture</a>
                 <a href="sponsor.html">Sponsor</a>
-                <a href="#">Contatti</a>
+                <a href="#footer">Contatti</a>
+            </div>
+
+            <label for="check" class="nav-toggle" id="open-menu">
+                <i class='bx bx-menu'></i>
+            </label>
+
+            <div class="menu">
+                <label for="check" class="nav-toggle close-menu">
+                    <i class='bx bx-x'></i>
+                </label>
+                <div class="menu-links">
+                    <a href="index.html">Home</a>
+                    <hr>
+                    <a href="storia.html">Storia</a>
+                    <hr>
+                    <a href="calendario.html">Calendario</a>
+                    <hr>
+                    <a href="scuolacalcio.html">Scuola calcio</a>
+                    <hr>
+                    <a href="categorie.html">Categorie</a>
+                    <hr>
+                    <a href="strutture.html">Strutture</a>
+                    <hr>
+                    <a href="sponsor.html">Sponsor</a>
+                    <hr>
+                    <a href="#footer">Contatti</a>
+                    <hr>
+                </div>
             </div>
         </nav>
     </header>
+
 
     <section id="home">
         <div class="hero">
             <div class="overlay"></div>
             <div class="content">
                 <div class="titolo">club sport roma</div>
-                <p>Passione, Dedizione e Spirito di Squadra</p>
-                <a href="#scopri-di-piu" class="cta-btn">Scopri di più</a>
+                <!-- <p>Passione, Dedizione e Spirito di Squadra</p> -->
+                <a href="#classifica" class="cta-btn">Scopri chi siamo</a>
             </div>
         </div>
     </section>
-    
-    <section id="match">
-        <div class="wrapper">
-            <div class="card">
-                <h2>Prossimo incontro</h2>
+
+    <section id="classifica">
+        <div class="title-serie-b">Serie B 2024/2025</div>
+        <hr>
+        <div class="container-classifica-risultati">
+        <div class="table-container">
+            <table class="classifica">
+                <thead>
+                    <tr>
+                        <th>Squadra</th>
+                        <th>PT</th>
+                        <th>V</th>
+                        <th>P</th>
+                        <th>S</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="prima">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>32</td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>1</td>
+                    </tr>
+                    <tr class="seconda">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>28</td>
+                        <td>9</td>
+                        <td>1</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="seconda">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>27</td>
+                        <td>8</td>
+                        <td>3</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="seconda">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>25</td>
+                        <td>7</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="seconda">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>22</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>18</td>
+                        <td>5</td>
+                        <td>3</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>16</td>
+                        <td>4</td>
+                        <td>4</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>14</td>
+                        <td>4</td>
+                        <td>2</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>12</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>8</td>
+                    </tr>
+                    <tr class="penultima">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>2</td>
+                        <td>10</td>
+                    </tr>
+                    <tr class="ultima">
+                        <td class="squadre">
+                            <div class="logo-classifica">
+                                <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            </div>
+                            <span>csr futsak</span>
+                        </td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container-partite">
+            <div class="partita">
                 <div class="serieb">
-                    <img src="images/logo-serieb-removebg-preview.png" alt="">
+                    <img src="images/logo-serieb-removebg-preview.png" alt="Logo Serie B">
                 </div>
                 <div class="container-incontro">
                     <div class="container-squadra">
                         <div class="container-img">
-                            <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            <img src="images/cures.png" alt="Club Sport Roma">
                         </div>
-                        <span>Club Sport Roma</span>
                     </div>
-                    <div class="container-versus">
-                        VS
-                    </div>
+                    <div class="container-versus">VS</div>
                     <div class="container-squadra">
                         <div class="container-img">
-                            <img src="images/mirafin-removebg-preview (1).png" alt="">
+                            <img src="images/csr.png" alt="Mirafin">
                         </div>
-                        <span>Mirafin</span>
                     </div>
                 </div>
-                <div class="data">
-                    09/11/2024
-                </div>
+                <div class="data">19/10/2024</div>
+
+
             </div>
-            <div class="card">
-                <h2>Prossimo incontro</h2>
+            <div class="partita">
                 <div class="serieb">
-                    <img src="images/logo-serieb-removebg-preview.png" alt="">
+                    <img src="images/logo-serieb-removebg-preview.png" alt="Logo Serie B">
                 </div>
                 <div class="container-incontro">
                     <div class="container-squadra">
                         <div class="container-img">
-                            <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
+                            <img src="images/cures.png" alt="Club Sport Roma">
                         </div>
-                        <span>Club Sport Roma</span>
                     </div>
-                    <div class="container-versus">
-                        VS
-                    </div>
+                    <div class="container-versus">VS</div>
                     <div class="container-squadra">
                         <div class="container-img">
-                            <img src="images/mirafin-removebg-preview (1).png" alt="">
+                            <img src="images/csr.png" alt="Mirafin">
                         </div>
-                        <span>Mirafin</span>
                     </div>
                 </div>
-                <div class="data">
-                    09/11/2024
-                </div>
-            </div>
-            <div class="card">
-                <h2>Prossimo incontro</h2>
-                <div class="serieb">
-                    <img src="images/logo-serieb-removebg-preview.png" alt="">
-                </div>
-                <div class="container-incontro">
-                    <div class="container-squadra">
-                        <div class="container-img">
-                            <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
-                        </div>
-                        <span>Club Sport Roma</span>
-                    </div>
-                    <div class="container-versus">
-                        VS
-                    </div>
-                    <div class="container-squadra">
-                        <div class="container-img">
-                            <img src="images/mirafin-removebg-preview (1).png" alt="">
-                        </div>
-                        <span>Mirafin</span>
-                    </div>
-                </div>
-                <div class="data">
-                    09/11/2024
-                </div>
-            </div>
-            <div class="card">
-                <h2>Prossimo incontro</h2>
-                <div class="serieb">
-                    <img src="images/logo-serieb-removebg-preview.png" alt="">
-                </div>
-                <div class="container-incontro">
-                    <div class="container-squadra">
-                        <div class="container-img">
-                            <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
-                        </div>
-                        <span>Club Sport Roma</span>
-                    </div>
-                    <div class="container-versus">
-                        VS
-                    </div>
-                    <div class="container-squadra">
-                        <div class="container-img">
-                            <img src="images/mirafin-removebg-preview (1).png" alt="">
-                        </div>
-                        <span>Mirafin</span>
-                    </div>
-                </div>
-                <div class="data">
-                    09/11/2024
-                </div>
+                <div class="data">19/10/2024</div>
             </div>
         </div>
-    <!-- <h2>Prossimo incontro</h2>
-        <div class="serieb">
-            <img src="images/logo-serieb-removebg-preview.png" alt="">
-        </div>
-        <div class="container-incontro">
-            <div class="container-squadra">
-                <div class="container-img">
-                    <img src="images/Club-Sport-Roma-removebg-preview.png" alt="">
-                </div>
-                <span>Club Sport Roma</span>
-            </div>
-            <div class="container-versus">
-                VS
-            </div>
-            <div class="container-squadra">
-                <div class="container-img">
-                    <img src="images/mirafin-removebg-preview (1).png" alt="">
-                </div>
-                <span>Mirafin</span>
-            </div>
-        </div>
-        <div class="data">
-            09/11/2024
-        </div>
-         -->
     </div>
+    </section>
+
+    <section id="articoli">
+        <div class="title-articoli">notizie</div>
+        <hr>
+        <div class="container-articoli">
+            <div class="article">
+                <div class="article-img">
+                    <img src="images/anoosh.jpg" alt="Articolo 1">
+                </div>
+                <div class="article-corpo">
+                    <h3>Convocazione rappresentativa</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam cupiditate provident
+                        sint quo ratione magnam.</p>
+                    <hr>
+                    <a href="https://example.com">Leggi di più</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-img">
+                    <img src="images/mister-pres.jpg" alt="Articolo 1">
+                </div>
+                <div class="article-corpo">
+                    <h3>Confermato mister Biolcati</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam cupiditate provident
+                        sint quo ratione magnam.</p>
+                    <hr>
+                    <a href="https://example.com">Leggi di più</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-img">
+                    <img src="images/FB_IMG_1732641285471.jpg" alt="Articolo 1">
+                </div>
+                <div class="article-corpo">
+                    <h3>Convocazione rappresentativa</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam cupiditate provident
+                        sint quo ratione magnam.</p>
+                    <hr>
+                    <a href="https://example.com">Leggi di più</a>
+                </div>
+            </div>
+            <div class="article">
+                <div class="article-img">
+                    <img src="images/FB_IMG_1732641021264.jpg" alt="Articolo 1">
+                </div>
+                <div class="article-corpo">
+                    <h3>Mister Stefano Novelli</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quisquam cupiditate provident
+                        sint quo ratione magnam.</p>
+                    <hr>
+                    <a href="https://example.com">Leggi di più</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-all">
+            <a href="articoli.html">Vedi tutti gli articoli</a>
+        </div>
+    </section>
 </body>
 
 </html>
