@@ -4,17 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asd Club sport roma | Scuola calcio</title>
+    <meta name="description" content="Scopri la Scuola Calcio a 5 del Club Sport Roma: un percorso formativo dedicato ai giovani talenti, con allenamenti di qualità, passione e professionalità. Un'opportunità unica per avvicinarsi al futsal e crescere nel mondo dello sport.">
+    <title>ASD Club Sport Roma | Scuola calcio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/csr.webp">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <style>
+        .content-scuola h3 {
+            font-size: 1.7rem;
+        }
+
         .container {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         .container .box {
@@ -35,6 +41,32 @@
             width: 100%;
             border-radius: 10px;
             margin-bottom: 15px;
+            filter: brightness(0.7);
+            transition: filter .3s;
+        }
+
+        .container .box .dream img:hover {
+            filter: brightness(0.9);
+            /* transform: scale(1.05); */
+            /* transform: perspective(500px) rotateY(15deg); */
+            /* transform: scaleX(-1); */
+            /* filter: blur(2px); */
+            /* border-radius: 50%; */
+            /* transform: translateY(-10px) */
+            /* filter: grayscale(0%); */
+            /* transform: rotate(deg); */
+            /* clip-path: inset(0 50% 0 50%); */
+            /* transform: rotateX(180deg); */
+            /* border-color: #007bff; */
+            /* transform: translateY(-10px); */
+            /* transform: scale(2.9); */
+
+            /* transform: perspective(500px) rotateX(10deg) rotateY(10deg); */
+        }
+
+        #pre-img {
+            font-size: 1.7rem;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -52,8 +84,8 @@
             </div>
 
             <div class="navbar-center">
-                <a href="#home">
-                    <img src="images/Club-Sport-Roma-removebg-preview.png" alt="Logo" class="logo">
+                <a href="index.html">
+                    <img src="images/csr.webp" alt="Club Sport Roma calcio a 5" class="logo">
                 </a>
             </div>
 
@@ -61,7 +93,7 @@
                 <a href="categorie.html">Categorie</a>
                 <a href="strutture.html">Strutture</a>
                 <a href="sponsor.html">Sponsor</a>
-                <a href="#footer">Contatti</a>
+                <a href="articoli.html">Notizie</a>
             </div>
 
             <label for="check" class="nav-toggle" id="open-menu">
@@ -87,7 +119,7 @@
                     <hr>
                     <a href="sponsor.html">Sponsor</a>
                     <hr>
-                    <a href="#footer">Contatti</a>
+                    <a href="articoli.html">Notizie</a>
                     <hr>
                 </div>
             </div>
@@ -109,52 +141,60 @@
         <div class="content-scuola">
             <h3>Passione, Sport e Divertimento: Entra nel Mondo CSR!</h3>
             <hr>
-            <p> Se sei alla ricerca di una realtà sportiva unica, dove talento, passione e divertimento si incontrano, la nostra scuola calcio a 5 è il posto giusto per te! Qui non troverai solo un luogo dove imparare a
-                giocare, ma una vera famiglia pronta a sostenerti in ogni passo del tuo percorso. Il nostro approccio è
+            <p> Se sei alla ricerca di una realtà sportiva unica, dove talento, passione e divertimento si incontrano,
+                la nostra scuola calcio a 5 è il posto giusto per te! Qui non troverai solo un luogo dove imparare a
+                giocare, ma una vera <span class="p-bold">famiglia</span> pronta a sostenerti in ogni passo del tuo
+                percorso. Il nostro approccio è
                 costruito su misura per te: che tu sia un principiante o un giovane talento in cerca di perfezionare le
-                tue abilità, il nostro staff qualificato è pronto a guidarti con programmi formativi innovativi e
+                tue abilità, il nostro <span class="p-bold">staff qualificato</span> è pronto a guidarti con programmi
+                formativi innovativi e
                 allenamenti stimolanti.
 
-                Oltre all’aspetto tecnico, ci impegniamo a promuovere valori fondamentali come il rispetto, la
-                disciplina e il gioco di squadra, che ti accompagneranno non solo sul campo, ma anche nella vita di
+                Oltre all’aspetto tecnico, ci impegniamo a promuovere valori fondamentali come il <span
+                    class="p-bold">rispetto, la
+                    disciplina e il gioco di squadra</span>, che ti accompagneranno non solo sul campo, ma anche nella
+                vita di
                 tutti i giorni. In un ambiente inclusivo e sicuro, avrai l'opportunità di stringere nuove amicizie,
-                affrontare sfide emozionanti e vivere l’adrenalina della competizione, sempre con un sorriso sul volto.
-<!-- 
+                affrontare sfide emozionanti e vivere l’adrenalina della competizione, <span class="p-bold">sempre con
+                    un sorriso sul volto</span>.
+                <!-- 
                 Scegliere la nostra scuola calcio a 5 significa investire nel tuo futuro, divertirti senza limiti e fare
                 parte di un progetto ambizioso che punta a valorizzare il talento in ogni sua forma. Ti aspettiamo a
                 braccia aperte per iniziare insieme questa straordinaria avventura sportiva: perché il calcio a 5 non è
                 solo uno sport, è una passione che ci unisce!</p> -->
         </div>
+        <h3 id="pre-img">Parola alle immagini!</h3>
+        <hr>
 
         <div class="container">
             <div class="box">
                 <div class="dream">
-                    <img src="img-sc-csr/387749835_822469943009641_2517423501912284059_n.jpg" alt="">
-                    <img src="img-sc-csr/387831655_822470089676293_4916649113938599673_n.jpg" alt="">
-                    <img src="img-sc-csr/387842108_822470073009628_4305669815225380688_n.jpg" alt="">
-                    <img src="img-sc-csr/448861787_445514294945890_5657310129338472482_n.jpg" alt="">
-                    <img src="img-sc-csr/436261624_959572559299378_5141994165521378829_n.jpg" alt="">
-                    <img src="img-sc-csr/438097659_409816808515639_2632166989502934716_n.jpg" alt="">
-                    <img src="img-sc-csr/449483536_449825321181454_7430447013892931606_n.jpg" alt="">
+                    <img src="images/azione-2.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/passaggio.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/controllo.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/abbraccio.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/foto-gruppo.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/capitano.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/foto-ragazze-2.webp" alt="scuola calcio a 5 a roma club sport roma">
                 </div>
                 <div class="dream">
-                    <img src="img-sc-csr/353596212_758649872724982_2208568653000682974_n.jpg" alt="">
-                    <img src="img-sc-csr/391728040_296124599884861_8260852677441935769_n.jpg" alt="">
-                    <img src="img-sc-csr/448886167_445506974946622_787507155061854858_n.jpg" alt="">
-                    <img src="img-sc-csr/387737542_822470129676289_7684540551983195673_n.jpg" alt="">
-                    <img src="img-sc-csr/448825143_445513908279262_4960443905679285591_n.jpg" alt="">
-                    <img src="img-sc-csr/458724482_1022757942980839_7397390873573666854_n.jpg" alt="">
-                    <img src="img-sc-csr/442419449_959572669299367_6084556605931354499_n.jpg" alt="">
+                    <img src="images/torta.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/gruppo-mister.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/esultanza.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/parata.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/mister-cap.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/foto-ragazzi.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/bandiere.webp" alt="scuola calcio a 5 a roma club sport roma">
                 </div>
 
                 <div class="dream">
-                    <img src="img-sc-csr/387742552_822469903009645_8027322305272908392_n.jpg" alt="">
-                    <img src="img-sc-csr/386513823_822469736342995_3439562089618860052_n.jpg" alt="">
-                    <img src="img-sc-csr/387147991_822469973009638_6371524435655760964_n.jpg" alt="">
-                    <img src="img-sc-csr/448961346_445513564945963_1041063569864839224_n.jpg" alt="">
-                    <img src="img-sc-csr/449192566_449827694514550_2934695326796904649_n.jpg" alt="">
-                    <img src="img-sc-csr/448888345_445515754945744_6489785599151663347_n.jpg" alt="">
-                    <img src="img-sc-csr/449436369_449826977847955_24869512415705093_n.jpg" alt="">
+                    <img src="images/azione.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/calcio.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/calcio-2.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/abbraccio-2.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/trofeo.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/striscione.webp" alt="scuola calcio a 5 a roma club sport roma">
+                    <img src="images/foto-ragazze.webp" alt="scuola calcio a 5 a roma club sport roma">
                 </div>
             </div>
         </div>
@@ -188,8 +228,87 @@
             </div>
         </div> -->
     </section>
-</body>
 
+    <section id="footer">
+        <div class="loghi">
+            <div class="container-logo">
+                <img src="images/logo_footer.webp" alt="logo lnd futsal">
+            </div>
+            <div class="container-logo">
+                <img src="images/csr.webp" alt="club sport roma calcio a 5 futsal">
+            </div>
+            <div class="container-logo" id="serieb-logo-footer">
+                <img src="images/logo-serieb.webp" alt="logo serie b calcio a 5 futsal">
+            </div>
+        </div>
+        <footer class="container-footer">
+            <div class="footer-section scroll-scale">
+                <h3>Contatti</h3>
+                <ul class="footer-links">
+                    <li><a href="">Email: giuliani.andrea@hotmail.com</a></li>
+                    <li><a href="">Pec: nordovest@pec.divisionecalcioa5.it</a></li>
+                    <li><a href="">Corrispondenza: Via Tuscania 12, 00191 Roma (RM)</a></li>
+                    <li><a href="">Telefono Sede: 3385428532</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section scroll-scale">
+                <h3 id="t-social">Menu</h3>
+                <div class="link-servizi">
+                    <ul class="container-footer-left">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Storia</a></li>
+                        <li><a href="#">Calendario</a></li>
+                        <li><a href="#">Scuola calcio</a></li>
+                    </ul>
+                    <ul class="container-footer-right">
+                        <li><a href="#">Categorie</a></li>
+                        <li><a href="#">Strutture</a></li>
+                        <li><a href="#">Sponsor</a></li>
+                        <li><a href="#">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-section scroll-scale">
+                <h3>Social</h3>
+                <div class="container-social">
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-instagram' id="instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-facebook' id="facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                    <div class="link-social">
+                        <a href="#">
+                            <i class='bx bxl-youtube' id="youtube"></i>
+                            <span>Youtube</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <div class="footer-bottom">
+            <p>&copy; A.S.D Club Sport Roma. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-gv">
+            <a href="linksito">
+                <p>Design & code by Gianluca Valenzi</p>
+            </a>
+        </div>
+    </section>
+
+    <a href="#home" class="arrow-up"><i class='bx bx-chevron-up'></i></a>
+</body>
+<script src="script.js"></script>
 <script>
     // JavaScript per il Carousel
     const prevBtn = document.querySelector('.prev');

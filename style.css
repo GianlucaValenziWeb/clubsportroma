@@ -9,10 +9,11 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    --color1: #082984;
+    --color1: #012589;
     --color2: #fcdf00;
     --color3: #eee3e3;
     --color4: #fff;
+    --hover-color: #0336c3;
     font-family: 'poppins', sans-serif;
     font-display: swap;
 }
@@ -35,24 +36,58 @@ h3 {
 }
 
 p {
-    color: #555;
+    color: #535353;
     font-size: 1rem;
     line-height: 1.2;
 }
 
 .p-bold {
     font-weight: bold;
-    color: #555;
+    color: #535353;
     font-size: 1rem;
 }
 
-header {
-    background-color: var(--color1);
-    padding: 5px 40px;
-    z-index: 100;
+.arrow-up {
+    overflow: hidden;
     position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background: transparent;
+    padding: 4px;
+    border-radius: 50%;
+    place-items: center;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #272323d2;
+    color: var(--color4);
+    transition: all .3s;
+}
+
+.arrow-up:hover {
+    background-color: #fcdf00e1;
+    color: #333;
+}
+
+/* Colore per il link attivo */
+.navbar a.active {
+    color: var(--color2);
+}
+
+/*  ----------------------------------------------------- HEADER ------------------------------------ */
+header {
+    background-color: transparent;
+    background-color: #081a4b;
+    padding: 2px 40px;
+    position: fixed;
+    z-index: 10000;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     width: 100%;
 }
+
 
 .navbar {
     display: flex;
@@ -60,12 +95,23 @@ header {
     justify-content: space-between;
 }
 
+/* 
+.navbar::after {
+    content: "";
+    position: absolute;
+    width: 1000%;
+    height: 100%;
+    backdrop-filter: blur(25px);
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
+
 .navbar a {
-    text-decoration: none;
     margin: 0 10px;
     font-size: 1.1rem;
-    transition: color 0.3s;
     color: var(--color4);
+    transition: color .3s;
 }
 
 .navbar a:hover {
@@ -99,7 +145,6 @@ header {
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
-
 }
 
 .close-menu {
@@ -114,7 +159,6 @@ header {
 #check {
     display: none;
 }
-
 
 .menu hr {
     width: 90%;
@@ -132,7 +176,6 @@ header {
 }
 
 .menu-links a {
-    text-decoration: none;
     color: var(--color4);
     font-size: 1.2rem;
 }
@@ -150,13 +193,11 @@ header {
     display: none;
 }
 
-
-
-/* Nascondi i link della navbar per schermi piccoli */
+/* MEDIA HEADER */
 @media (max-width: 1000px) {
 
     header {
-        padding: 5px 20px;
+        padding: 5px 40px;
     }
 
     .navbar {
@@ -199,29 +240,23 @@ header {
         justify-content: flex-start;
         padding-top: 80px;
         z-index: 200;
-        /* transition: right .5s; */
+        background-color: #000000d5;
+        backdrop-filter: blur(14px);
     }
 
 }
 
-/* 
-#home {
-    padding-top: 60px;
-} */
-
-/* Sezione hero */
+/* ----------------------------------------------- HOME ---------------------------------- */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    /* Occupa tutta l'altezza dello schermo */
-    background: url("images/prova-home-Photoroom.png") no-repeat center center/cover;
-    /* Immagine di sfondo */
+    background: url("images/img-home.png") no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
+    color: var(--color4);
 }
 
 /* Overlay per scurire lo sfondo */
@@ -237,16 +272,13 @@ header {
 
 /* Contenuto */
 .hero .content {
-    /* position: relative; */
     z-index: 2;
-    /* max-width: 600px; */
     padding: 20px;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
 }
 
 .hero .titolo {
@@ -256,10 +288,6 @@ header {
     letter-spacing: 2px;
     font-family: "Black Ops One", system-ui;
     color: var(--color2);
-    /* background: linear-gradient(90deg, #fcdf00, #082984); */
-    /* background-clip: inherit;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 .hero p {
@@ -268,14 +296,12 @@ header {
     color: #f0f0f0;
 }
 
-/* Pulsante Call-to-Action */
 .cta-btn {
     display: inline-block;
     padding: 12px 25px;
     font-size: 1rem;
     color: #fff;
-    background-color: #082984;
-    /* Colore pulsante */
+    background-color: var(--color1);
     border-radius: 5px;
     text-transform: uppercase;
     text-decoration: none;
@@ -284,11 +310,10 @@ header {
 }
 
 .cta-btn:hover {
-    background-color: #004ecb;
-    /* Cambia colore al passaggio del mouse */
+    background-color: var(--hover-color)
 }
 
-/* Responsive Design */
+/* MEDIA HOME */
 @media (max-width: 768px) {
 
     .hero h1 {
@@ -305,9 +330,8 @@ header {
     }
 }
 
-
+/* PROSSIME PARTITE */
 #match {
-    padding: 0px 0px;
     background-color: var(--color3);
 }
 
@@ -315,7 +339,6 @@ header {
     display: flex;
     gap: 20px;
     width: 100%;
-    /* uguale a sotto */
     height: 600px;
     overflow-x: scroll;
     overflow-y: hidden;
@@ -328,13 +351,10 @@ header {
     padding: 20px 30px;
     flex-shrink: 0;
     width: 100%;
-    /* uguale a sopra */
     height: 600px;
     background-color: rgb(205, 190, 190);
-    /* border-radius: 14px; */
     text-align: center;
 }
-
 
 .card h2 {
     text-align: center;
@@ -402,10 +422,15 @@ header {
 .container-strutture {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 100%;
+    width: 90%;
     background-color: var(--color4);
     border-radius: 10px;
     margin-bottom: 40px;
+    transition: all .3s;
+}
+
+.container-strutture:hover {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.8);
 }
 
 .tab {
@@ -414,30 +439,34 @@ header {
     gap: 15px;
 }
 
-/* Stile per l'immagine */
-.container-img {
+.tab .container-img {
     width: 300px;
     height: 200px;
     overflow: hidden;
     border-radius: 10px;
 }
 
-.container-img img {
+.tab .container-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: ease .3s;
 }
 
-/* Contenuto del testo */
+.tab .container-img img:hover {
+    transform: scale(1.05);
+}
+
 .content {
     flex: 1;
 }
 
 .content h3 {
+    /* color: #444444; */
+    font-weight: bold;
     margin-bottom: 6px;
 }
 
-/* Stile per la sezione Maps */
 .maps {
     text-align: left;
     margin-top: 10px;
@@ -448,24 +477,24 @@ header {
     border: none;
     border-top: 1px solid #a7a7a7;
     width: 100%;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
 }
 
 .maps a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Black Ops One", system-ui;
-    letter-spacing: 1.3px;
-    color: #717171;
-
+    color: #fff;
+    background-color: var(--color1);
+    border-radius: 5px;
+    padding: 6px 10px;
+    transition: ease .3s;
 }
 
 .maps a:hover {
-    color: var(--color1);
-    color: #488fed;
+    background-color: var(--hover-color);
 }
 
+/* MEDIA STRUTTURE */
 @media (max-width: 750px) {
     .tab {
         flex-direction: column;
@@ -495,7 +524,7 @@ header {
 .layout-container h3 {
     text-align: left;
     margin-bottom: 5px;
-    /* margin-top: 40px; */
+    font-size: 1.7rem;
 }
 
 .layout-container hr {
@@ -521,6 +550,12 @@ header {
     border-radius: 10px;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.45);
     padding: 10px;
+    transition: all .3s;
+}
+
+
+.gallery-item:hover {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.8);
 }
 
 #m-sponsor {
@@ -528,40 +563,13 @@ header {
     max-height: 350px;
 }
 
-/* Stile per le immagini */
 .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* Adatta l'immagine senza distorcerla */
-
 }
-
-/* 
-.view-all {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.view-all a {
-    text-decoration: none;
-    font-size: 1.4rem;
-    background-color: var(--color1);
-    color: var(--color2);
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    margin: 0;
-    text-transform: uppercase;
-    font-family: "Black Ops One", system-ui;
-}
-
-.view-all a:hover {
-    background-color: #0056b3;
-} */
 
 /* ----------------------------------------------- CATEGORIE ----------------------------------------------- */
-
 #categorie {
     padding: 70px 40px;
     display: flex;
@@ -573,7 +581,15 @@ header {
 #categorie h3 {
     text-align: left;
     margin-bottom: 5px;
-    /* margin-top: 40px; */
+}
+
+.title-cat-p {
+    color: #535353;
+    font-size: 1.7rem;
+    /* text-transform: uppercase; */
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.3px;
+    font-weight: bolder;
 }
 
 #categorie hr {
@@ -583,14 +599,17 @@ header {
 }
 
 .container-categorie {
-    /* border: 2px solid #ccc; */
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.45);
     padding: 20px;
-    width: 100%;
+    width: 90%;
     background-color: var(--color4);
-    /* background-color: #f9f9f9; */
     border-radius: 10px;
     margin-bottom: 40px;
+    transition: all .3s;
+}
+
+.container-categorie:hover {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.8);
 }
 
 .categorie {
@@ -599,14 +618,6 @@ header {
     gap: 15px;
 }
 
-/*
-.title-cat-p {
-    background: linear-gradient(200deg, #082984, #fcdf00);
-    background-clip: inherit;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; 
-}
-*/
 .categorie .container-img {
     width: 105px;
     height: auto;
@@ -616,20 +627,20 @@ header {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: ease .3s;
 }
 
-/* Contenuto del testo */
+.categorie .container-img img:hover {
+
+    transform: scale(1.05);
+}
+
 .content-categorie {
     flex: 1;
 }
 
-.content-categorie h3 {
-    margin-bottom: 5px;
-}
-
 .tuttocampo {
     text-align: left;
-    /* margin-top: 6px; */
     width: 100%;
 }
 
@@ -637,23 +648,24 @@ header {
     border: none;
     border-top: 1px solid #a7a7a7;
     width: 100%;
-    /* margin-bottom: 6px; */
+    margin: 4px 0;
 }
 
 .tuttocampo a {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
-    font-weight: bold;
-    font-family: "Black Ops One", system-ui;
-    letter-spacing: 1.2px;
-    color: #717171;
+    color: var(--color4);
+    background-color: var(--color1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: ease .3s;
 }
 
 .tuttocampo a:hover {
-    color: var(--color1);
-    color: #149347;
+    background-color: var(--hover-color);
 }
 
+/* MEDIA CATEGORIE */
 @media (max-width: 750px) {
     .categorie {
         flex-direction: column;
@@ -672,18 +684,16 @@ header {
 #storia {
     width: 100%;
     padding: 70px 40px;
-    color: #333;
+    /* color: #333; */
     background-color: var(--color3);
 }
 
-/* Contenitore del contenuto */
 .storia-content {
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-/* Blocco singolo */
 .storia-block {
     display: flex;
     align-items: center;
@@ -691,20 +701,30 @@ header {
     flex-wrap: wrap;
 }
 
-/* Immagine del blocco */
 .storia-image img {
     width: 450px;
     height: auto;
     border-radius: 10px;
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+    transition: ease .4s;
 }
 
-/* Testo del blocco */
+.storia-image img:hover {
+    /* transform: scale(1.05); */
+    /* transform: perspective(500px) rotateY(15deg); */
+    /* transform: scaleX(-1); */
+    /* filter: blur(2px); */
+    border-radius: 50%;
+    /* transform: translateY(-10px) */
+    /* filter: brightness(0.7); */
+    /* filter: grayscale(0%); */
+    /* transform: rotate(deg); */
+}
+
 .storia-text {
     flex: 1;
 }
 
-/* Stile del titolo e paragrafo del testo */
 .storia-text h2 {
     color: var(--color1);
     font-size: 2rem;
@@ -716,12 +736,11 @@ header {
     line-height: 1.5;
 }
 
-/* Reverse layout per i blocchi con immagine a destra */
 .storia-block.reverse {
     flex-direction: row-reverse;
 }
 
-/* Media Query per schermi più piccoli */
+/* MEDIA STORIA */
 @media (max-width: 768px) {
     .storia-block {
         flex-direction: column;
@@ -757,14 +776,12 @@ header {
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
 }
 
-/* Carousel nascosto di default */
 .layout-carousel {
     display: none;
     position: relative;
     overflow: hidden;
 }
 
-/* Carousel immagini */
 .carousel {
     display: flex;
     transition: transform 0.4s ease-in-out;
@@ -772,7 +789,6 @@ header {
 
 .carousel::-webkit-scrollbar {
     display: none;
-    /* Nascondi scrollbar su Webkit */
 }
 
 .carousel-item {
@@ -788,7 +804,6 @@ header {
     object-fit: cover;
 }
 
-/* Frecce */
 .prev,
 .next {
     position: absolute;
@@ -811,7 +826,6 @@ header {
     right: 10px;
 }
 
-/* Dots */
 .carousel-dots {
     text-align: center;
     padding: 10px 0;
@@ -858,16 +872,17 @@ header {
 .contact-link {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #082984;
+    background-color: var(--color1);
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
     text-decoration: none;
+    transition: background-color .3s;
 }
 
 .contact-link:hover {
-    background-color: #59678e;
+    background-color: var(--hover-color);
 }
 
 
@@ -904,6 +919,8 @@ header {
     width: 100%;
     height: 130px;
     background-color: var(--color1);
+    background-color: #081a4b;
+
     padding: 10px 48px;
     /* Margine interno su entrambi i lati */
 }
@@ -934,6 +951,7 @@ header {
 
 .custom-shape-divider-top-1731431830 .shape-fill {
     fill: var(--color1);
+    fill: #081a4b;
 }
 
 /* ----------------------------------------------- CALENDARIO ----------------------------------------------- */
@@ -960,6 +978,15 @@ header {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    transition: all .3s;
+}
+
+#calendario .partita:hover {
+    box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.8);
+}
+
+.partita.scaduto {
+    background-color: #004ecb;
 }
 
 
@@ -1013,7 +1040,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--color1);
+    background-color: #081a4b;
     border-bottom: 1px solid var(--color3);
     padding: 14px 30px;
 }
@@ -1039,7 +1066,7 @@ header {
     gap: 20px;
     padding: 20px;
     width: 100%;
-    background-color: var(--color1);
+    background-color: #081a4b;
 }
 
 .footer-section {
@@ -1126,20 +1153,14 @@ header {
 
 .container-social .link-social a i {
     font-size: 2.3rem;
+    transition: color .3s;
     color: var(--color3);
 }
 
-/* .container-social #instagram {
-    color: #f401ba;
+.container-social .link-social a i:hover,
+.container-social .link-social a:hover {
+    color: var(--color2);
 }
-
-.container-social #facebook {
-    color: var(--color4);
-}
-
-.container-social #youtube {
-    color: #f60002;
-} */
 
 /* Footer Bottom */
 .footer-bottom {
@@ -1147,18 +1168,19 @@ header {
     padding: 18px 0;
     border-top: 1px solid var(--color3);
     height: 50px;
-    background-color: var(--color1);
+    background-color: #081a4b;
 }
 
 .footer-gv {
     text-align: center;
     height: 22px;
-    background-color: var(--color1);
+    background-color: #081a4b;
 }
 
 .footer-gv p,
 .footer-gv a {
-    color: #8f8f8f;
+    font-size: 0.9rem;
+    color: #676767;
 }
 
 .footer-section p,
@@ -1193,15 +1215,11 @@ header {
 #classifica {
     background-color: var(--color3);
     color: #333;
-    /* display: flex;
-    align-items: center;
-    justify-content: flex-start;
-gap: 30px; */
-    /* flex-wrap: wrap; */
     padding: 60px 40px;
 }
 
-#classifica .title-serie-b, .title-articoli {
+#classifica .title-serie-b,
+.title-articoli {
     font-size: 2rem;
     margin-bottom: 5px;
     text-transform: uppercase;
@@ -1210,41 +1228,31 @@ gap: 30px; */
     text-align: center;
 }
 
-#classifica hr, #articoli hr {
+#classifica hr,
+#articoli hr {
     margin-bottom: 16px;
     border: none;
     border-top: 2px solid #a8a8a8;
 }
 
 .container-classifica-risultati {
-    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
 }
-/*
-.table-container {
-    /* max-width: 800px;
-    margin: 0 auto; 
-
-}*/
 
 table {
     background-color: var(--color4);
-    /* width: 100%; */
     width: 700px;
     height: 640px;
     border-collapse: collapse;
-    /* margin-top: 20px; */
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    /* Applica il bordo arrotondato */
     overflow: hidden;
-    /* Evita che i contenuti sporgano */
 }
 
 thead {
-    background-color: #082984;
+    background-color: var(--color1);
     color: #fff;
     text-align: left;
 }
@@ -1256,6 +1264,7 @@ thead th {
 tbody tr {
     text-align: center;
     border-bottom: 1px solid #bebebe;
+    transition: ease .3s;
 }
 
 tbody td {
@@ -1264,28 +1273,13 @@ tbody td {
     vertical-align: middle;
 }
 
-/* Colori delle posizioni */
+/* Colori delle posizioni CSR*/
 .prima {
-    background-color: hsla(123, 100%, 38%, 0.500);
     background-color: hsla(57, 100%, 56%, 0.691);
 }
 
-/* .seconda {
-    background-color: hsla(57, 100%, 56%, 0.691);
-} */
-
-/* .ultima {
-    background-color: hsla(0, 96%, 42%, 0.5);
-}
-
-.penultima {
-    background-color: hsla(37, 100%, 36%, 0.500);
-} */
-
-/* Hover sugli elementi */
 tbody tr:hover {
     background-color: #ccc;
-    /* cursor:; */
 }
 
 .squadre {
@@ -1313,10 +1307,27 @@ tbody tr:hover {
     flex-direction: column; */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 40px;
+    gap: 20px;
+}
+
+.container-foto-b {
+    /* width: 100%;
+    height: auto; */
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    /* max-width: 580px; */
+}
+
+.container-foto-b img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }
 
 .partita {
+    max-height: 300px;
+    /* max-width: 580px; */
     background-color: var(--color4);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
@@ -1377,83 +1388,75 @@ tbody tr:hover {
 
 /* ------------------------------------------------------ ARTICOLI ----------------------------------- */
 #articoli {
-    background-color: var(--color3);
+    background-color: #dcd2d2;
     padding: 60px 40px;
 }
 
-/* Stile generale del contenitore degli articoli */
 .container-articoli {
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 30px; */
-    /* Spaziatura tra gli articoli */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 30px;
     row-gap: 50px;
+    margin-top: 30px;
 }
 
-/* Stile per ogni articolo */
 .article {
-    /* flex: 1 1 30%; */
-    /* Larghezza flessibile */
-    background-color: #fff;
-    /* Sfondo bianco */
+    background-color: var(--color4);
     border-radius: 10px;
-    /* Bordo arrotondato */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    /* Ombra */
     overflow: hidden;
-    /* Per evitare che gli elementi interni escano dal bordo */
     display: flex;
     flex-direction: column;
     padding: 0;
-    /* Rimuovi padding interno */
+    transition: all .4s;
 }
 
-/* Immagine dell'articolo */
+.article:hover {
+    box-shadow: 0 4px 20px hsla(0, 0%, 14%, 0.8);
+    transform: translateY(-15px);
+}
+
 .article-img img {
     width: 100%;
     height: 240px;
     object-fit: cover;
     display: block;
+    /* transition: transform .3s; */
 }
 
-/* Corpo dell'articolo */
+/* .article-img img:hover {
+    transform: scale(1.05);
+} */
+
 .article-corpo {
     padding: 10px;
-    /* Spaziatura interna */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-/* Titolo dell'articolo */
 .article-corpo h3 {
     margin: 10px 0;
-    /* font-size: 1.2rem;
-    font-weight: bold; */
+    color: #424242;
+    font-weight: bold;
     font-size: 1.4rem;
 }
 
-/* Paragrafo */
+
 .article-corpo p {
-    /* margin: 10px 0; */
     color: #555;
 }
 
-/* Linea orizzontale */
 .article-corpo hr {
+    margin-top: 5px;
     border: none;
     border-top: 2px solid #a8a8a8;
-    margin: 10px 0;
 }
 
 .article a {
     text-decoration: none;
-    background-color: #082984;
-    color: #fff;
+    background-color: var(--color1);
+    color: var(--color4);
     padding: 8px 10px;
     border-radius: 5px;
     font-size: 0.9rem;
@@ -1462,14 +1465,9 @@ tbody tr:hover {
     width: 115px;
 }
 
-.article a:hover {
-    background-color: #0056b3;
-}
-
 .view-all {
     margin-top: 60px;
     text-align: center;
-    /* margin: 0 auto; */
 }
 
 .view-all a {
@@ -1483,6 +1481,7 @@ tbody tr:hover {
     text-transform: uppercase;
 }
 
+.article a:hover,
 .view-all a:hover {
-    background-color: #0056b3;
+    background-color: var(--hover-color);
 }
