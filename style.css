@@ -18,6 +18,40 @@
     font-display: swap;
 }
 
+.scroll-scale {
+    opacity: 0;
+    transform: scale(.9);
+    transition: all 2s;
+}
+
+.scroll-bottom {
+    opacity: 0;
+    transform: translateY(300px);
+    transition: 3s;
+}
+
+.scroll-top {
+    opacity: 0;
+    transform: translateY(-300px);
+    transition: 3s;
+}
+
+.scroll-left {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 3s;
+}
+
+.scroll-right {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: 3s;
+}
+
+.show-items {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 h1 {
     font-size: 2.8rem;
@@ -84,28 +118,14 @@ header {
     padding: 2px 40px;
     position: fixed;
     z-index: 10000;
-    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
     width: 100%;
 }
-
 
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
-/* 
-.navbar::after {
-    content: "";
-    position: absolute;
-    width: 1000%;
-    height: 100%;
-    backdrop-filter: blur(25px);
-    top: 0;
-    left: 0;
-    z-index: -1;
-} */
 
 .navbar a {
     margin: 0 10px;
@@ -193,65 +213,12 @@ header {
     display: none;
 }
 
-/* MEDIA HEADER */
-@media (max-width: 1000px) {
-
-    header {
-        padding: 5px 40px;
-    }
-
-    .navbar {
-        justify-content: space-between;
-    }
-
-    .navbar-center {
-        justify-content: flex-start;
-        margin-left: -10px;
-    }
-
-    .navbar-left,
-    .navbar-right {
-        display: none;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-
-    #check:checked~.menu {
-        right: 0;
-    }
-
-    .logo {
-        width: 42px;
-        height: 42px;
-    }
-
-    .menu {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 84%;
-        height: 100vh;
-        background-color: var(--color1);
-        transition: right 0.4s ease-in;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-top: 80px;
-        z-index: 200;
-        background-color: #000000d5;
-        backdrop-filter: blur(14px);
-    }
-
-}
-
 /* ----------------------------------------------- HOME ---------------------------------- */
 .hero {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url("images/img-home.png") no-repeat center center/cover;
+    background: url("images/img-home.webp") no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -313,101 +280,284 @@ header {
     background-color: var(--hover-color)
 }
 
-/* MEDIA HOME */
-@media (max-width: 768px) {
 
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .cta-btn {
-        font-size: 0.9rem;
-        padding: 10px 20px;
-    }
-}
-
-/* PROSSIME PARTITE */
+/* CLASSIFICA + IMG SQUADRA + NEXT GAME */
 #match {
     background-color: var(--color3);
 }
 
-.wrapper {
+#classifica {
+    background-color: var(--color3);
+    color: #333;
+    padding: 60px 40px;
+}
+
+.title-serie-b,
+.title-articoli,
+.title-storia {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-family: "Black Ops One", system-ui;
+    color: var(--color1);
+    text-align: center;
+}
+
+#classifica hr,
+#articoli hr,
+#storia hr {
+    margin-bottom: 20px;
+    border: none;
+    border-top: 2px solid #a8a8a8;
+}
+
+.container-classifica-risultati {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+table {
+    background-color: var(--color4);
+    width: 700px;
+    height: 640px;
+    border-collapse: collapse;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: var(--color1);
+    color: #fff;
+    text-align: left;
+}
+
+thead th {
+    padding: 10px;
+}
+
+tbody tr {
+    text-align: center;
+    border-bottom: 1px solid #bebebe;
+    transition: ease .3s;
+}
+
+tbody td {
+    text-align: left;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+/* Colori delle posizioni CSR*/
+.prima {
+    background-color: hsla(57, 100%, 56%, 0.691);
+}
+
+tbody tr:hover {
+    background-color: #ccc;
+}
+
+.squadre {
     display: flex;
-    gap: 20px;
-    width: 100%;
-    height: 600px;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scroll-snap-type: x proximity;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
 }
 
-.card {
-    scroll-snap-align: center;
-    box-sizing: border-box;
-    padding: 20px 30px;
-    flex-shrink: 0;
-    width: 100%;
-    height: 600px;
-    background-color: rgb(205, 190, 190);
-    text-align: center;
-}
-
-.card h2 {
-    text-align: center;
-}
-
-.serieb {
-    width: 120px;
+.logo-classifica {
+    width: 30px;
     height: auto;
-    margin: 0 auto;
+    object-fit: cover;
+}
+
+.logo-classifica img {
+    width: 100%;
+    height: 100%;
+}
+
+.ultima {
+    border-bottom: none;
+}
+
+.container-partite {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+    overflow: hidden;
+}
+
+.container-foto-b {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.container-foto-b img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.partita {
+    max-height: 300px;
+    /* max-width: 580px; */
+    background-color: var(--color4);
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .serieb img {
-    width: 100%;
-    height: 100%;
+    max-width: 45px;
+    height: auto;
 }
 
 .container-incontro {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 30px 60px;
+    justify-content: center;
+}
+
+.container-squadra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
 }
 
 .container-squadra .container-img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 20px;
+    max-width: 70px;
+    height: auto;
 }
 
-.container-squadra .container-img img {
+.container-img img {
     width: 100%;
     height: 100%;
 }
 
-.container-squadra {
-    text-align: center;
-}
-
-.container-squadra span {
-    font-size: 1.1rem;
-}
-
 .container-versus {
-    font-size: 4rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #595959;
+    padding: 0 10px;
     font-family: "PT Serif", serif;
 }
 
 .data {
-    margin-top: 20px;
+    font-size: 1rem;
+    color: #6f6f6f;
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------------------------ ARTICOLI ----------------------------------- */
+#articoli {
+    background-color: #dcd2d2;
+    padding: 60px 40px;
+}
+
+.container-articoli {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
+    row-gap: 50px;
+    margin-top: 30px;
+}
+
+.article {
+    background-color: var(--color4);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
+    flex-direction: column;
+    padding: 0;
+    transition: all .4s;
+}
+
+.article, .storia-block, .gallery{
+    transform: translateY(50px);
+    transition: opacity 1.5s ease, transform 1.5s ease;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.article:hover {
+    box-shadow: 0 4px 20px hsla(0, 0%, 14%, 0.8);
+    transform: translateY(-15px);
+}
+
+.article-img img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.article-corpo {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.article-corpo h3 {
+    margin: 10px 0;
+    color: #424242;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.article-corpo p {
+    color: #555;
+}
+
+.article-corpo hr {
+    margin-top: 5px;
+    border: none;
+    border-top: 2px solid #a8a8a8;
+}
+
+.article a {
+    text-decoration: none;
+    background-color: var(--color1);
+    color: var(--color4);
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    width: 115px;
+}
+
+.view-all {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.view-all a {
+    text-decoration: none;
+    font-size: 1rem;
+    background-color: var(--color1);
+    color: var(--color4);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.article a:hover,
+.view-all a:hover {
+    background-color: var(--hover-color);
 }
 
 /* ----------------------------------------------- STRUTTURE ----------------------------------------------- */
@@ -462,7 +612,6 @@ header {
 }
 
 .content h3 {
-    /* color: #444444; */
     font-weight: bold;
     margin-bottom: 6px;
 }
@@ -492,21 +641,6 @@ header {
 
 .maps a:hover {
     background-color: var(--hover-color);
-}
-
-/* MEDIA STRUTTURE */
-@media (max-width: 750px) {
-    .tab {
-        flex-direction: column;
-    }
-
-    .container-img {
-        width: 100%;
-    }
-
-    .maps a {
-        font-size: 0.9rem;
-    }
 }
 
 /* ----------------------------------------------- SPONSOR ----------------------------------------------- */
@@ -553,7 +687,6 @@ header {
     transition: all .3s;
 }
 
-
 .gallery-item:hover {
     box-shadow: 0px 4px 22px rgba(0, 0, 0, 0.8);
 }
@@ -586,7 +719,6 @@ header {
 .title-cat-p {
     color: #535353;
     font-size: 1.7rem;
-    /* text-transform: uppercase; */
     font-family: "Black Ops One", system-ui;
     letter-spacing: 1.3px;
     font-weight: bolder;
@@ -665,33 +797,17 @@ header {
     background-color: var(--hover-color);
 }
 
-/* MEDIA CATEGORIE */
-@media (max-width: 750px) {
-    .categorie {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .categorie .container-img {
-        width: 100px;
-        height: auto;
-        margin: 0 auto;
-    }
-
-}
-
 /* ----------------------------------------------- STORIA ----------------------------------------------- */
 #storia {
     width: 100%;
     padding: 70px 40px;
-    /* color: #333; */
     background-color: var(--color3);
 }
 
 .storia-content {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 50px;
 }
 
 .storia-block {
@@ -710,15 +826,7 @@ header {
 }
 
 .storia-image img:hover {
-    /* transform: scale(1.05); */
-    /* transform: perspective(500px) rotateY(15deg); */
-    /* transform: scaleX(-1); */
-    /* filter: blur(2px); */
     border-radius: 50%;
-    /* transform: translateY(-10px) */
-    /* filter: brightness(0.7); */
-    /* filter: grayscale(0%); */
-    /* transform: rotate(deg); */
 }
 
 .storia-text {
@@ -740,28 +848,56 @@ header {
     flex-direction: row-reverse;
 }
 
-/* MEDIA STORIA */
-@media (max-width: 768px) {
-    .storia-block {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .storia-block.reverse {
-        flex-direction: column;
-    }
-
-    .storia-image img {
-        width: 100%;
-    }
-}
-
 /* ----------------------------------------------- SCUOLA CALCIO ----------------------------------------------- */
 #scuolacalcio {
     padding: 60px 40px;
     background-color: var(--color3);
 }
 
+.content-scuola h3 {
+    font-size: 1.7rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+.container .box .dream img {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    filter: brightness(0.7);
+    transition: filter .3s;
+}
+
+.container .box .dream img:hover {
+    filter: brightness(0.9);
+}
+
+#pre-img {
+    font-size: 1.7rem;
+    margin-top: 40px;
+}
+
+/* 
 .layout-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -844,18 +980,7 @@ header {
 
 .dot.active {
     background-color: var(--color1);
-}
-
-/* Media Query per Carousel */
-@media (max-width: 780px) {
-    .layout-grid {
-        display: none;
-    }
-
-    .layout-carousel {
-        display: block;
-    }
-}
+} */
 
 .content-scuola hr {
     border: none;
@@ -885,51 +1010,24 @@ header {
     background-color: var(--hover-color);
 }
 
-
-
-/* .scuola-content .contattaci {
-    color: #fff;
-    border-radius: 5px;
-    background-color: #005A94;
-    text-transform: uppercase;
-    font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 18px;
-    transition: background-color 0.3s;
-    gap: 8px;
-}
-
-.scuola-content .contattaci:hover {
-    background-color: #083d75;
-    transition: background-color 0.3s ease;
-} */
-
-
-
-/* ----------------------------------------------------- SFONDO BLU ---------------------------------- */
+/* --------------------------------------------- SFONDO BLU ---------------------------------- */
 .interruzione {
     text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    /* Allinea il testo in basso */
     font-size: 2.3rem;
     width: 100%;
     height: 130px;
     background-color: var(--color1);
     background-color: #081a4b;
-
     padding: 10px 48px;
-    /* Margine interno su entrambi i lati */
 }
 
 .interruzione .text {
     color: var(--color2);
     font-family: "Black Ops One", system-ui;
     letter-spacing: 1.5px;
-
 }
 
 .custom-shape-divider-top-1731431830 {
@@ -955,10 +1053,8 @@ header {
 }
 
 /* ----------------------------------------------- CALENDARIO ----------------------------------------------- */
-
 #calendario {
     padding: 80px 40px;
-    /* max-width: 1200px; */
     background-color: var(--color3);
 }
 
@@ -989,29 +1085,26 @@ header {
     background-color: #004ecb;
 }
 
-
 #calendario .serieb img {
     max-width: 45px;
     height: auto;
-    /* background-color: #0044cc; */
 }
 
 #calendario .container-incontro {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* margin: 15px 0; */
 }
 
 #calendario .container-squadra {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0 10px;
+    margin: 25px 10px;
 }
 
 #calendario .container-squadra .container-img {
-    max-width: 70px;
+    max-width: 60px;
     height: auto;
 }
 
@@ -1034,8 +1127,28 @@ header {
     padding-bottom: 10px;
 }
 
-/* --------------------------------------------- FOOTER ------------------------------------- */
+.past-date {
+    position: relative;
+    overflow: hidden;
+}
 
+.past-date::before {
+    content: "Partita terminata";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #012589;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 1.1px;
+}
+
+/* --------------------------------------------- FOOTER ------------------------------------- */
 .loghi {
     display: flex;
     justify-content: space-around;
@@ -1063,7 +1176,6 @@ header {
 .container-footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
     padding: 20px;
     width: 100%;
     background-color: #081a4b;
@@ -1083,20 +1195,18 @@ header {
 .footer-section h3 {
     margin-bottom: 12px;
     color: var(--color2);
-    /* font-style: italic; */
     font-size: 1.5rem;
 }
 
-/* Links Section */
 .footer-links {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 14px;
 }
 
 .footer-links li a {
-    color: var(--color4);
+    color: var(--color3);
     font-weight: normal;
 }
 
@@ -1107,9 +1217,7 @@ header {
 
 .link-servizi {
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
-    /* text-align: center; */
     gap: 60px;
 }
 
@@ -1117,9 +1225,8 @@ header {
 .container-footer-right {
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 22px;
 }
-
 
 .link-servizi li {
     display: flex;
@@ -1130,7 +1237,7 @@ header {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--color4);
+    color: var(--color3);
 }
 
 .link-servizi li a:hover {
@@ -1148,11 +1255,11 @@ header {
 .container-social .link-social a {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
 }
 
 .container-social .link-social a i {
-    font-size: 2.3rem;
+    font-size: 2rem;
     transition: color .3s;
     color: var(--color3);
 }
@@ -1186,302 +1293,5 @@ header {
 .footer-section p,
 .footer-section a,
 .footer-bottom p {
-    color: var(--color4);
-}
-
-@media (max-width: 850px) {
-    .container-footer {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .footer-section {
-        border-right: none;
-        border-bottom: 1px solid var(--color3);
-        padding-bottom: 20px;
-    }
-
-    .footer-section:last-child {
-        border-bottom: none;
-    }
-
-    .footer-section:first-child {
-        border-left: none;
-    }
-}
-
-
-
-#classifica {
-    background-color: var(--color3);
-    color: #333;
-    padding: 60px 40px;
-}
-
-#classifica .title-serie-b,
-.title-articoli {
-    font-size: 2rem;
-    margin-bottom: 5px;
-    text-transform: uppercase;
-    font-family: "Black Ops One", system-ui;
-    color: var(--color1);
-    text-align: center;
-}
-
-#classifica hr,
-#articoli hr {
-    margin-bottom: 16px;
-    border: none;
-    border-top: 2px solid #a8a8a8;
-}
-
-.container-classifica-risultati {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
-}
-
-table {
-    background-color: var(--color4);
-    width: 700px;
-    height: 640px;
-    border-collapse: collapse;
-    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-thead {
-    background-color: var(--color1);
-    color: #fff;
-    text-align: left;
-}
-
-thead th {
-    padding: 10px;
-}
-
-tbody tr {
-    text-align: center;
-    border-bottom: 1px solid #bebebe;
-    transition: ease .3s;
-}
-
-tbody td {
-    text-align: left;
-    padding: 8px;
-    vertical-align: middle;
-}
-
-/* Colori delle posizioni CSR*/
-.prima {
-    background-color: hsla(57, 100%, 56%, 0.691);
-}
-
-tbody tr:hover {
-    background-color: #ccc;
-}
-
-.squadre {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 15px;
-}
-
-.logo-classifica {
-    width: 30px;
-    height: auto;
-    object-fit: cover;
-}
-
-.logo-classifica img {
-    width: 100%;
-    height: 100%;
-}
-
-.container-partite {
-    /* display: flex;
-    l
-    gap: 32px;
-    flex-direction: column; */
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.container-foto-b {
-    /* width: 100%;
-    height: auto; */
-    width: 100%;
-    max-height: 300px;
-    object-fit: cover;
-    /* max-width: 580px; */
-}
-
-.container-foto-b img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-.partita {
-    max-height: 300px;
-    /* max-width: 580px; */
-    background-color: var(--color4);
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
-    border-radius: 12px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    /* width: 400px;
-    height: auto; */
-}
-
-
-.serieb img {
-    max-width: 45px;
-    height: auto;
-    /* background-color: #0044cc; */
-}
-
-.container-incontro {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin: 15px 0; */
-}
-
-.container-squadra {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-}
-
-.container-squadra .container-img {
-    max-width: 70px;
-    height: auto;
-}
-
-.container-img img {
-    width: 100%;
-    height: 100%;
-}
-
-.container-versus {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #595959;
-    padding: 0 10px;
-    font-family: "PT Serif", serif;
-}
-
-.data {
-    font-size: 1rem;
-    color: #6f6f6f;
-    padding-bottom: 10px;
-}
-
-/* ------------------------------------------------------ ARTICOLI ----------------------------------- */
-#articoli {
-    background-color: #dcd2d2;
-    padding: 60px 40px;
-}
-
-.container-articoli {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 30px;
-    row-gap: 50px;
-    margin-top: 30px;
-}
-
-.article {
-    background-color: var(--color4);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    transition: all .4s;
-}
-
-.article:hover {
-    box-shadow: 0 4px 20px hsla(0, 0%, 14%, 0.8);
-    transform: translateY(-15px);
-}
-
-.article-img img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
-    /* transition: transform .3s; */
-}
-
-/* .article-img img:hover {
-    transform: scale(1.05);
-} */
-
-.article-corpo {
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.article-corpo h3 {
-    margin: 10px 0;
-    color: #424242;
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-
-.article-corpo p {
-    color: #555;
-}
-
-.article-corpo hr {
-    margin-top: 5px;
-    border: none;
-    border-top: 2px solid #a8a8a8;
-}
-
-.article a {
-    text-decoration: none;
-    background-color: var(--color1);
-    color: var(--color4);
-    padding: 8px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-    width: 115px;
-}
-
-.view-all {
-    margin-top: 60px;
-    text-align: center;
-}
-
-.view-all a {
-    text-decoration: none;
-    font-size: 1rem;
-    background-color: var(--color1);
-    color: var(--color4);
-    padding: 15px 30px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-}
-
-.article a:hover,
-.view-all a:hover {
-    background-color: var(--hover-color);
+    color: var(--color3);
 }

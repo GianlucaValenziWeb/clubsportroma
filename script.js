@@ -22,8 +22,6 @@ arrowUp.addEventListener('click', (e) => {
 
 
 
-
-
 // Seleziona tutti i link della navbar
 const navLinks = document.querySelectorAll('.navbar a');
 
@@ -32,7 +30,82 @@ const currentPage = window.location.pathname.split('/').pop();
 
 // Aggiungi la classe 'active' al link corrispondente
 navLinks.forEach(link => {
-  if (link.getAttribute('href') === currentPage) {
-    link.classList.add('active');
-  }
+    if (link.getAttribute('href') === currentPage) {
+        link.classList.add('active');
+    }
 });
+
+
+
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const item = document.querySelectorAll('.article, .storia-block');
+
+//     const observer = new IntersectionObserver(function (entries) {
+//         entries.forEach(function (entry) {
+//             if (entry.isIntersecting) {
+//                 entry.target.classList.add('visible');  // Aggiunge la classe quando il box è visibile
+//             } else {
+//                 entry.target.classList.remove('visible');  // Rimuove la classe quando il box esce dal viewport
+//             }
+//         });
+//     }, { threshold: 0.1 });
+
+//     item.forEach(function (box) {
+//         observer.observe(box);
+//     });
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Seleziona tutti gli elementi con le classi 'article' e 'storia-block'
+    const items = document.querySelectorAll('.article, .storia-block, .gallery');
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');  // Aggiunge la classe quando l'elemento è visibile
+            } else {
+                entry.target.classList.remove('visible');  // Rimuove la classe quando l'elemento esce dal viewport
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Osserva ogni elemento selezionato
+    items.forEach(function (box) {
+        observer.observe(box);
+    });
+});
+
+
+
+
+
+
+
+
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show-items");
+        } else {
+            entry.target.classList.remove("show-items");
+        }
+    });
+});
+
+const scrollScale = document.querySelectorAll(".scroll-scale");
+scrollScale.forEach((el) => observer.observe(el));
+
+const scrollBottom = document.querySelectorAll(".scroll-bottom");
+scrollBottom.forEach((el) => observer.observe(el));
+
+const scrollTop = document.querySelectorAll(".scroll-top");
+scrollTop.forEach((el) => observer.observe(el));
+
+const scrollLeft = document.querySelectorAll(".scroll-left");
+scrollLeft.forEach((el) => observer.observe(el));
+
+const scrollRight = document.querySelectorAll(".scroll-right");
+scrollRight.forEach((el) => observer.observe(el));
+
