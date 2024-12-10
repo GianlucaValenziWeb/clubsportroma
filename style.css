@@ -397,9 +397,14 @@ tbody tr:hover {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    transition: ease .4s;
 }
 
-.partita {
+.container-foto-b img:hover {
+    border-radius: 50%;
+}
+
+.next-game {
     max-height: 300px;
     /* max-width: 580px; */
     background-color: var(--color4);
@@ -477,23 +482,7 @@ tbody tr:hover {
     display: flex;
     flex-direction: column;
     padding: 0;
-    transition: all .4s;
-}
-
-.article, .storia-block, .gallery{
-    transform: translateY(50px);
-    transition: opacity 1.5s ease, transform 1.5s ease;
-    opacity: 0;
-}
-
-.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.article:hover {
-    box-shadow: 0 4px 20px hsla(0, 0%, 14%, 0.8);
-    transform: translateY(-15px);
+    transition: transform .4s;
 }
 
 .article-img img {
@@ -884,12 +873,12 @@ tbody tr:hover {
     width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
-    filter: brightness(0.7);
+    filter: brightness(0.8);
     transition: filter .3s;
 }
 
 .container .box .dream img:hover {
-    filter: brightness(0.9);
+    filter: none;
 }
 
 #pre-img {
@@ -1061,7 +1050,7 @@ tbody tr:hover {
 #calendario .container-calendario {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 40px;
+    gap: 50px;
 }
 
 #calendario .partita {
@@ -1074,7 +1063,6 @@ tbody tr:hover {
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    transition: all .3s;
 }
 
 #calendario .partita:hover {
@@ -1294,4 +1282,26 @@ tbody tr:hover {
 .footer-section a,
 .footer-bottom p {
     color: var(--color3);
+}
+
+.article,
+.storia-block,
+.gallery,
+.partita,
+.container-strutture,
+.container-categorie,
+.dream-img {
+    transform: translateY(50px) !important;
+    transition: opacity 1.5s ease, transform 1.5s ease, box-shadow .3s ease !important;
+    opacity: 0;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0) !important;
+}
+
+.article:hover {
+    box-shadow: 0 4px 20px hsla(0, 0%, 14%, 0.8);
+    transform: translateY(-15px) !important;
 }

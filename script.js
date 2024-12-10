@@ -58,7 +58,7 @@ navLinks.forEach(link => {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Seleziona tutti gli elementi con le classi 'article' e 'storia-block'
-    const items = document.querySelectorAll('.article, .storia-block, .gallery');
+    const items = document.querySelectorAll('.article, .storia-block, .gallery, .partita, .container-strutture, .container-categorie, .dream-img');
 
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {

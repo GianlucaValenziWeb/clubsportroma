@@ -70,6 +70,12 @@
 
 
 /* MEDIA CATEGORIE */
+@media (max-width: 1200px) {
+    .container-categorie {
+        width: 100%;
+    }
+}
+
 @media (max-width: 750px) {
     .categorie {
         flex-direction: column;
@@ -82,11 +88,86 @@
         margin: 0 auto;
     }
 
+    .content-categorie h3 {
+        font-size: 1.3rem;
+    }
+
+    .tuttocampo a {
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
+
 }
 
 
+/* MEDIA STRUTTURE */
+@media (max-width: 1200px) {
+    .container-strutture {
+        width: 100%;
+    }
+
+    .content h3 {
+        font-size: 1.3rem;
+    }
+
+    .maps a {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .container-strutture .tab {
+        flex-direction: column;
+    }
+
+    .tab .container-img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .container-strutture {
+        padding: 0;
+    }
+
+    .container-strutture .tab {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .tab .container-img {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        width: 100%;
+    }
+
+    .content {
+        padding: 14px;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .p-bold {
+        font-size: 0.9rem;
+    }
+}
+
 /* MEDIA STORIA */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .storia-text h2 {
+        font-size: 1.7rem;
+    }
+
+    .storia-image img {
+        width: 350px;
+    }
+}
+
+@media (max-width: 920px) {
     .storia-block {
         flex-direction: column;
         align-items: center;
@@ -96,9 +177,18 @@
         flex-direction: column;
     }
 
+    .storia-image {
+        margin-top: 10px;
+    }
+
     .storia-image img {
         width: 100%;
     }
+
+    .storia-text {
+        margin-top: 20px;
+    }
+
 }
 
 
