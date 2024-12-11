@@ -32,8 +32,8 @@
 
 .scroll-top {
     opacity: 0;
-    transform: translateY(-300px);
-    transition: 3s;
+    transform: translateY(-200px);
+    transition: 2s;
 }
 
 .scroll-left {
@@ -162,7 +162,7 @@ header {
     font-size: 1.8rem;
     display: none;
     top: 50%;
-    right: 20px;
+    right: 38px;
     transform: translateY(-50%);
 }
 
@@ -233,15 +233,14 @@ header {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(1, 1, 16, 0.6);
     z-index: 1;
 }
 
 /* Contenuto */
 .hero .content {
     z-index: 2;
-    padding: 20px;
-    text-align: center;
+    /* text-align: center; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -249,19 +248,13 @@ header {
 }
 
 .hero .titolo {
+    /* overflow: hidden; */
     font-size: 3.3rem;
     margin-bottom: 5px;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: "Black Ops One", system-ui;
     color: var(--color2);
-    /* padding: 0 30px; */
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
-    color: #f0f0f0;
 }
 
 .cta-btn {
@@ -852,6 +845,13 @@ tbody tr:hover {
 
 .content-scuola h3 {
     font-size: 1.7rem;
+}
+
+.content-scuola h3 span {
+    font-size: 1.7rem;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.2px;
+    color: var(--color1);
 }
 
 .container {

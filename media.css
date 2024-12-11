@@ -51,7 +51,7 @@
     .menu a {
         text-transform: uppercase;
         font-size: 1rem;
-        padding: 8px 0;
+        padding: 16px 0;
     }
 }
 
@@ -115,7 +115,7 @@
     }
 
     .hero .titolo {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .cta-btn {
@@ -175,9 +175,17 @@
         font-size: 1.4rem;
     }
 
+    .content-scuola h3 span{
+        display: none;
+    }
+
     .contact-link {
         padding: 10px 12px;
         font-size: 0.9rem;
+    }
+
+    .container .box .dream img {
+        filter: none;
     }
 }
 
