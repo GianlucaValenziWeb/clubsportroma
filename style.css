@@ -152,7 +152,6 @@ header {
 
 .logo {
     width: 50px;
-    height: 50px;
 }
 
 /* Icone Hamburger e X */
@@ -224,6 +223,7 @@ header {
     justify-content: center;
     text-align: center;
     color: var(--color4);
+    padding: 0 40px;
 }
 
 /* Overlay per scurire lo sfondo */
@@ -255,6 +255,7 @@ header {
     letter-spacing: 2px;
     font-family: "Black Ops One", system-ui;
     color: var(--color2);
+    /* padding: 0 30px; */
 }
 
 .hero p {
@@ -319,8 +320,8 @@ header {
 
 table {
     background-color: var(--color4);
-    width: 700px;
-    height: 640px;
+    width: 100%;
+    height: auto;
     border-collapse: collapse;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -365,6 +366,12 @@ tbody tr:hover {
     gap: 15px;
 }
 
+.squadre span {
+    text-transform: uppercase;
+    font-weight:bolder;
+    font-size: 0.9rem;
+}
+
 .logo-classifica {
     width: 30px;
     height: auto;
@@ -382,8 +389,7 @@ tbody tr:hover {
 
 .container-partite {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     overflow: hidden;
 }
 
@@ -525,7 +531,7 @@ tbody tr:hover {
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
-    width: 115px;
+    width: 111px;
 }
 
 .view-all {
@@ -780,6 +786,7 @@ tbody tr:hover {
     padding: 5px 10px;
     border-radius: 5px;
     transition: ease .3s;
+    width: 100%;
 }
 
 .tuttocampo a:hover {
@@ -886,91 +893,6 @@ tbody tr:hover {
     margin-top: 40px;
 }
 
-/* 
-.layout-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    gap: 20px;
-}
-
-.image-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
-}
-
-.layout-carousel {
-    display: none;
-    position: relative;
-    overflow: hidden;
-}
-
-.carousel {
-    display: flex;
-    transition: transform 0.4s ease-in-out;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel-item {
-    min-width: 100%;
-    width: 260px;
-    height: auto;
-}
-
-.carousel-item img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    object-fit: cover;
-}
-
-.prev,
-.next {
-    position: absolute;
-    top: 45%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.carousel-dots {
-    text-align: center;
-    padding: 10px 0;
-}
-
-.dot {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    background-color: #a2a1a1;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.dot.active {
-    background-color: var(--color1);
-} */
-
 .content-scuola hr {
     border: none;
     border-top: 2px solid #a7a7a7;
@@ -987,7 +909,7 @@ tbody tr:hover {
     display: inline-block;
     padding: 12px 24px;
     background-color: var(--color1);
-    color: #fff;
+    color: var(--color4);
     font-weight: bold;
     text-transform: uppercase;
     border-radius: 5px;
@@ -1010,7 +932,7 @@ tbody tr:hover {
     height: 130px;
     background-color: var(--color1);
     background-color: #081a4b;
-    padding: 10px 48px;
+    padding: 10px 40px;
 }
 
 .interruzione .text {
@@ -1033,7 +955,7 @@ tbody tr:hover {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 35px;
+    height: 45px;
 }
 
 .custom-shape-divider-top-1731431830 .shape-fill {
@@ -1191,6 +1113,7 @@ tbody tr:hover {
     display: flex;
     flex-direction: column;
     gap: 14px;
+    text-align: left;
 }
 
 .footer-links li a {
@@ -1213,8 +1136,12 @@ tbody tr:hover {
 .container-footer-right {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 24px;
 }
+
+/* #container-social {
+    gap: 13px !important;
+} */
 
 .link-servizi li {
     display: flex;
@@ -1226,56 +1153,28 @@ tbody tr:hover {
     align-items: center;
     text-decoration: none;
     color: var(--color3);
+    transition: color .3s;
 }
 
-.link-servizi li a:hover {
-    transition: color .3s;
+.link-servizi li a:hover,
+.link-servizi li a i:hover {
     color: var(--color2);
 }
 
-.container-social {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 6px;
-}
-
-.container-social .link-social a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.container-social .link-social a i {
+.link-servizi li a i {
     font-size: 2rem;
     transition: color .3s;
     color: var(--color3);
-}
-
-.container-social .link-social a i:hover,
-.container-social .link-social a:hover {
-    color: var(--color2);
+    margin-right: 10px;
 }
 
 /* Footer Bottom */
 .footer-bottom {
     text-align: center;
-    padding: 18px 0;
+    padding: 18px 30px;
     border-top: 1px solid var(--color3);
     height: 50px;
     background-color: #081a4b;
-}
-
-.footer-gv {
-    text-align: center;
-    height: 22px;
-    background-color: #081a4b;
-}
-
-.footer-gv p,
-.footer-gv a {
-    font-size: 0.9rem;
-    color: #676767;
 }
 
 .footer-section p,
