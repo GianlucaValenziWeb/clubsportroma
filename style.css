@@ -159,7 +159,7 @@ header {
     position: absolute;
     color: var(--color2);
     cursor: pointer;
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: none;
     top: 50%;
     right: 38px;
@@ -168,9 +168,9 @@ header {
 
 .close-menu {
     position: absolute;
-    top: 34px;
-    right: 16px;
-    font-size: 2.3rem;
+    top: 29px;
+    right: 32px;
+    font-size: 2.4rem;
     cursor: pointer;
 }
 
@@ -297,6 +297,13 @@ header {
     text-align: center;
 }
 
+.title-serie-b span {
+    font-size: 2rem;
+    font-family: "Black Ops One", system-ui;
+    letter-spacing: 1.2px;
+    color: var(--color1);
+}
+
 #classifica hr,
 #articoli hr,
 #storia hr {
@@ -361,7 +368,6 @@ tbody tr:hover {
 
 .squadre span {
     text-transform: uppercase;
-    font-weight:bolder;
     font-size: 0.9rem;
 }
 
@@ -389,10 +395,10 @@ tbody tr:hover {
 .container-foto-b {
     width: 100%;
     max-height: 300px;
-    object-fit: cover;
 }
 
 .container-foto-b img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -405,7 +411,6 @@ tbody tr:hover {
 
 .next-game {
     max-height: 300px;
-    /* max-width: 580px; */
     background-color: var(--color4);
     box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
     border-radius: 12px;
@@ -415,6 +420,23 @@ tbody tr:hover {
     align-items: center;
     justify-content: space-between;
     text-align: center;
+    overflow: hidden;
+}
+
+.next-game::before {
+    content: "Prossima partita";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #012589;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: 'poppins', sans-serif;
+    letter-spacing: 1.1px;
 }
 
 .serieb img {
@@ -790,7 +812,7 @@ tbody tr:hover {
 #storia {
     width: 100%;
     padding: 70px 40px;
-    background-color: var(--color3);
+    background-color: #dcd2d2;
 }
 
 .storia-content {

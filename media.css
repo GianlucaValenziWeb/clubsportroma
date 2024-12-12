@@ -1,3 +1,18 @@
+/* MEDIA CALENDARIO */
+@media (max-width: 870px) {
+    .container-squadra .container-img {
+        max-width: 50px;
+    }
+
+    #calendario .serieb img {
+        max-width: 25px;
+    }
+
+    .container-squadra {
+        margin: 20px 10px;
+    }
+}
+
 /* MEDIA HEADER */
 @media (max-width: 1000px) {
 
@@ -56,6 +71,16 @@
 }
 
 /* MEDIA HOME */
+@media (min-width: 1400px) {
+    .container-partite {
+        grid-template-columns: 1fr;
+    }
+
+    .storia-image img {
+        width: 550px;
+    }
+}
+
 @media (max-width: 860px) {
     .container-classifica-risultati {
         grid-template-columns: repeat(1, 1fr);
@@ -70,8 +95,12 @@
         width: 100%;
         height: auto;
     }
-    
+
     .title-serie-b {
+        font-size: 1.7rem;
+    }
+
+    .title-serie-b span {
         font-size: 1.7rem;
     }
 
@@ -101,11 +130,11 @@
     .logo-classifica {
         width: 25px;
     }
-    
+
     .squadre {
         gap: 5px;
     }
-    
+
     .squadre span {
         font-size: 0.8rem;
     }
@@ -124,7 +153,11 @@
     }
 
     .hero {
-        background: url("images/img-home.png") no-repeat center center/cover;
+        background: url("images/img-home_1.webp") no-repeat center center/cover;
+    }
+
+    .title-serie-b span {
+        display: none;
     }
 }
 
@@ -143,7 +176,7 @@
         font-size: 0.9rem;
         padding: 10px 20px;
     }
-    
+
 }
 
 /* MEDIA SPONSOR */
@@ -175,7 +208,7 @@
         font-size: 1.4rem;
     }
 
-    .content-scuola h3 span{
+    .content-scuola h3 span {
         display: none;
     }
 
