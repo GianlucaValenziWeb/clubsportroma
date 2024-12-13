@@ -71,7 +71,7 @@
 }
 
 /* MEDIA HOME */
-@media (min-width: 1400px) {
+@media (min-width: 1300px) {
     .container-partite {
         grid-template-columns: 1fr;
     }

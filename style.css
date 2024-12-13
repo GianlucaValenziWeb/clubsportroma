@@ -372,7 +372,7 @@ tbody tr:hover {
 }
 
 .logo-classifica {
-    width: 30px;
+    width: 25px;
     height: auto;
     object-fit: cover;
 }
@@ -394,7 +394,7 @@ tbody tr:hover {
 
 .container-foto-b {
     width: 100%;
-    max-height: 300px;
+    max-height: 320px;
 }
 
 .container-foto-b img {
