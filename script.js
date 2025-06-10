@@ -1,23 +1,26 @@
 // Seleziona la freccetta
-const arrowUp = document.querySelector('.arrow-up');
+// const arrowUp = document.querySelector('.arrow-up');
 
 // Aggiungi un evento per mostrare/nascondere la freccetta in base allo scrolling
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) { // Mostra la freccetta dopo aver scollato 200px
-        arrowUp.style.display = 'flex';
-    } else {
-        arrowUp.style.display = 'none';
-    }
-});
+// window.addEventListener('scroll', () => {
+//     if (window.scrollY > 200) { 
+//         arrowUp.style.display = 'flex';
+//     } else {
+//         arrowUp.style.display = 'none';
+//     }
+
+// });
 
 // Aggiungi un effetto di scorrimento verso l'alto
-arrowUp.addEventListener('click', (e) => {
-    e.preventDefault(); // Evita il comportamento predefinito del link
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth' // Scorrimento fluido
-    });
-});
+// arrowUp.addEventListener('click', (e) => {
+//     e.preventDefault(); 
+//     window.scrollTo({
+//         top: 0,
+//         behavior: 'smooth'
+//     });
+// });
+
+
 
 
 
@@ -38,7 +41,7 @@ navLinks.forEach(link => {
 
 document.addEventListener('DOMContentLoaded', function () {
     // Seleziona tutti gli elementi con le classi 'article' e 'storia-block'
-    const items = document.querySelectorAll('.article, .storia-block, .gallery, .partita, .container-strutture, .container-categorie, .dream-img');
+    const items = document.querySelectorAll('.article, .container-contatti, .file-pdf, .storia-block, .gallery, .partita, .container-strutture, .container-categorie, .dream-img');
 
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
@@ -55,14 +58,6 @@ document.addEventListener('DOMContentLoaded', function () {
         observer.observe(box);
     });
 });
-
-
-
-
-
-
-
-
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -88,4 +83,9 @@ scrollLeft.forEach((el) => observer.observe(el));
 
 const scrollRight = document.querySelectorAll(".scroll-right");
 scrollRight.forEach((el) => observer.observe(el));
+
+
+// window.addEventListener("scroll", function() {
+
+// });
 
