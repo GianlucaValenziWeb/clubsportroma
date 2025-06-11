@@ -180,6 +180,11 @@ header {
     color: var(--color2);
 }
 
+
+.interruzione {
+    display: none;
+}
+
 @media (max-width: 1200px) {
     header {
         padding: 0px 50px;
@@ -235,8 +240,12 @@ header {
         border-radius: 10px;
     }
 
+    .custom-shape-divider-top-1731431830 {
+        top: 72px !important;
+    }
+
     .custom-shape-divider-top-1731431830 .shape-fill {
-        display: none;
+        fill: var(--color1) !important;
     }
 
     .navbar-title {
@@ -259,12 +268,16 @@ header {
 
     .nav-toggle {
         right: 30px;
-        font-size: 4rem;
+        font-size: 3.2rem;
         top: 50%;
     }
 
     .close-menu {
         top: 51px !important;
+    }
+
+    .custom-shape-divider-top-1731431830 {
+        top: 142px !important;
     }
 
     .navbar-center {
@@ -276,7 +289,26 @@ header {
     }
 
     .navbar-top img {
-        height: 75px;
+        height: 60px;
+    }
+
+    .interruzione {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 2.3rem;
+        width: 100%;
+        height: 144px;
+        background-color: var(--color1);
+        /* background-color: #424242; */
+        padding: 10px 0;
+    }
+
+    .interruzione .text {
+        color: var(--color2);
+        font-family: "Black Ops One", system-ui;
+        letter-spacing: 1.5px;
     }
 }
 
@@ -287,6 +319,10 @@ header {
 
     .nav-toggle {
         right: 20px;
+    }
+
+    .interruzione {
+        font-size: 1.8rem;
     }
 
 }
@@ -424,7 +460,7 @@ header {
     }
 
     #home-1 {
-        height: 91vh;
+        height: 88vh;
     }
 
     .prev,
@@ -554,13 +590,13 @@ header {
 
 @media (max-width: 900px) {
     #articoli {
-        padding: 140px 30px 80px !important;
+        padding: 80px 30px !important;
     }
 }
 
 @media (max-width: 500px) {
     #articoli {
-        padding: 140px 20px 80px !important;
+        padding: 70px 20px !important;
     }
 
     .container-articoli {
@@ -587,13 +623,13 @@ header {
 
 @media (max-width: 900px) {
     #calendario {
-        padding: 120px 30px 70px !important;
+        padding: 80px 30px !important;
     }
 }
 
 @media (max-width: 500px) {
     #calendario {
-        padding: 120px 20px 70px !important;
+        padding: 70px 20px !important;
     }
 
     .match-promo {
@@ -698,21 +734,27 @@ header {
 
 @media (max-width: 900px) {
     #strutture {
-        padding: 140px 30px 70px !important;
+        padding: 80px 30px !important;
+    }
+
+    .content h3 {
+        font-size: 1.35rem;
     }
 
     .tab {
         flex-direction: column;
+        gap: 10px;
     }
 
     .tab .container-img {
         width: 100%;
+        height: 200px;
     }
 }
 
 @media (max-width: 500px) {
     #strutture {
-        padding: 140px 20px 70px !important;
+        padding: 70px 20px !important;
     }
 
     .container-strutture {
@@ -795,7 +837,7 @@ header {
 
 @media (max-width: 900px) {
     #sponsor {
-        padding: 140px 30px 70px !important;
+        padding: 80px 30px !important;
     }
 
     #iframe-maps {
@@ -805,7 +847,7 @@ header {
 
 @media (max-width: 500px) {
     #sponsor {
-        padding: 140px 20px 70px !important;
+        padding: 70px 20px !important;
     }
 
     .layout-container h3 {
@@ -906,19 +948,25 @@ header {
 
 @media (max-width: 900px) {
     #categorie {
-        padding: 140px 30px 70px !important;
+        padding: 80px 30px !important;
     }
 
     .categorie {
         display: flex;
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .content h3 {
+        font-size: 1.35rem;
     }
 
 }
 
 @media (max-width: 500px) {
     #categorie {
-        padding: 140px 20px 70px !important;
+        padding: 70px 20px !important;
+
     }
 
     .title-cat-p {
@@ -926,7 +974,7 @@ header {
     }
 
     .categorie .container-img {
-        width: 140px;
+        width: 120px;
     }
 }
 
@@ -1004,7 +1052,7 @@ header {
 
 @media (max-width: 900px) {
     #storia {
-        padding: 140px 30px 80px;
+        padding: 80px 30px;
     }
 
     .storia-block {
@@ -1028,7 +1076,7 @@ header {
 
 @media (max-width: 500px) {
     #storia {
-        padding: 140px 20px 80px;
+        padding: 70px 20px;
     }
 
     .storia-text h2 {
@@ -1146,13 +1194,13 @@ header {
 
 @media (max-width: 900px) {
     #safeguarding {
-        padding: 140px 30px 70px !important;
+        padding: 80px 30px !important;
     }
 }
 
 @media (max-width: 500px) {
     #safeguarding {
-        padding: 140px 20px 70px !important;
+        padding: 70px 20px !important;
     }
 
     .contenuto-testa-sg h3,
@@ -1268,7 +1316,7 @@ header {
 
 @media (max-width: 900px) {
     #scuolacalcio {
-        padding: 140px 30px 80px !important;
+        padding: 80px 30px !important;
     }
 
     .container .box {
@@ -1279,11 +1327,17 @@ header {
         gap: 20px;
         width: 100%;
     }
+
+    .content-scuola h3,
+    #pre-img {
+        font-size: 1.8rem;
+        text-align: center;
+    }
 }
 
 @media (max-width: 500px) {
     #scuolacalcio {
-        padding: 140px 20px 80px !important;
+        padding: 70px 20px !important;
     }
 }
 
@@ -1363,13 +1417,13 @@ header {
 
 @media (max-width: 900px) {
     #contatti {
-        padding: 140px 30px 70px !important;
+        padding: 80px 30px !important;
     }
 }
 
 @media (max-width: 500px) {
     #contatti {
-        padding: 140px 20px 70px !important;
+        padding: 70px 20px !important;
     }
 
     .contatti {
